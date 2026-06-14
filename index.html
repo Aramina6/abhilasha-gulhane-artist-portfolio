@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhilasha Gulhane — Artist</title>
+    <meta name="description" content="Portfolio of Abhilasha Gulhane, visual artist. Selected works, artist statement, and biography.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Inter:wght@300;400;500&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
+
+        :root {
+            --accent: #2f2f2f;
+        }
+
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+
+        .serif {
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+
+        .heading-font {
+            font-family: 'Space Grotesk', 'Inter', system_ui, sans-serif;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
+
+        .art-frame {
+            background: white;
+            padding: 12px;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 
+                       0 4px 6px -4px rgb(0 0 0 / 0.1);
+            transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+                        box-shadow 0.2s;
+        }
+        
+        .art-frame:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 
+                       0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            background: #f8f8f8;
+        }
+
+        .nav-link {
+            position: relative;
+            transition: color 0.15s ease;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -1px;
+            left: 0;
+            background-color: #2f2f2f;
+            transition: width 0.2s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+
+        .section-title {
+            font-size: 13px;
+            letter-spacing: 2px;
+            font-weight: 500;
+            text-transform: uppercase;
+            color: #666;
+        }
+
+        .portfolio-card {
+            cursor: pointer;
+        }
+
+        .modal {
+            animation: fadeInScale 0.2s ease forwards;
+        }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.96);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .artwork-title {
+            font-size: 15px;
+            letter-spacing: -0.2px;
+        }
+
+        .clean-border {
+            /* Simulates the white border treatment from the optimized PDF */
+            box-shadow: 0 0 0 14px #ffffff,
+                        0 0 0 15px #f1f1f1,
+                        0 10px 30px -10px rgb(0 0 0 / 0.15);
+        }
+    </style>
+</head>
+<body class="bg-[#f9f7f4] text-[#222]">
+    <!-- Navbar -->
+    <nav class="bg-[#f9f7f4]/95 backdrop-blur border-b border-[#e8e4dc] sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-x-2">
+                <span class="serif text-2xl tracking-tight font-bold">Abhilasha Gulhane</span>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+                <a href="#about" class="nav-link text-[#333] hover:text-black">About</a>
+                <a href="#work" class="nav-link text-[#333] hover:text-black">Work</a>
+                <a href="#statement" class="nav-link text-[#333] hover:text-black">Statement</a>
+            </div>
+
+            <div class="flex items-center gap-x-3">
+                <a href="Abhilasha_Gulhane_Artist_Portfolio_Optimized.pdf" 
+                   target="_blank"
+                   class="inline-flex items-center gap-x-2 text-xs font-medium px-4 h-9 rounded-full border border-[#d9d3c7] hover:bg-white transition-colors">
+                    <i class="fa-solid fa-file-pdf"></i>
+                    <span class="hidden sm:inline">Optimized PDF</span>
+                </a>
+                <button onclick="window.location.href='#work'"
+                        class="inline-flex items-center gap-x-2 bg-[#222] text-white text-sm font-medium px-5 h-9 rounded-full hover:bg-black active:scale-[0.985] transition-all">
+                    View Work
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="max-w-5xl mx-auto px-6 pt-16 pb-12">
+        <div class="max-w-2xl">
+            <div class="section-title mb-3">Visual Artist  •  Climate &amp; Energy Researcher</div>
+            <h1 class="serif text-[72px] md:text-[86px] leading-[0.92] tracking-tighter font-bold mb-6">
+                Abhilasha<br>Gulhane
+            </h1>
+            <p class="max-w-md text-[17px] text-[#444] leading-tight">
+                Exploring stillness, humans, geometry &amp; nature through technology and economics.<br>
+                Inspired by traditional Indian wall painting from Maharashtra, India.
+            </p>
+            <div class="text-xs text-[#666] mt-3">Bay Area, California &nbsp;•&nbsp; abhilashagulhane111@gmail.com &nbsp;•&nbsp; +1 650 602 8740 &nbsp;•&nbsp; @abhilasha.sfart</div>
+            <div class="mt-8 flex gap-3">
+                <a href="#work" 
+                   class="inline-flex items-center justify-center gap-x-2 bg-[#222] hover:bg-black text-white font-medium text-sm h-11 px-7 rounded-full transition-colors">
+                    Explore the work
+                    <i class="fa-solid fa-arrow-right text-xs"></i>
+                </a>
+                <a href="#statement" 
+                   class="inline-flex items-center justify-center gap-x-2 border border-[#d9d3c7] hover:bg-white font-medium text-sm h-11 px-6 rounded-full transition-colors">
+                    Read the statement
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About -->
+    <section id="about" class="border-t border-[#e8e4dc] bg-white py-12">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="grid md:grid-cols-12 gap-x-12 items-start">
+                <div class="md:col-span-4 mb-8 md:mb-0">
+                    <div class="section-title mb-2">About the Artist</div>
+                    <div class="serif text-4xl font-semibold tracking-tight leading-none">Abhilasha Gulhane</div>
+                </div>
+                <div class="md:col-span-8 max-w-2xl text-[15.2px] text-[#333] leading-relaxed space-y-5">
+                    <p>
+                        Abhilasha Gulhane is a Bay Area-based visual artist and climate &amp; energy researcher who bridges technology with the poetic language of traditional Indian folk art. With a natural affinity for both analytical thinking and creativity—gifts inherited from her mother and grandmother—Abhilasha began painting at the age of five. Her grandmother carried forward the living tradition of painting on the walls of their home in India.
+                    </p>
+                    <p>
+                        Formally trained, she earned distinction in advanced drawing from the Maharashtra State Board of Art Education, India. She began with pencils and watercolors, exploring humans and nature. In 2015, acrylic and oil painting opened new dimensions. Today she creates powerful acrylic abstracts exploring stillness, humans, geometry, and nature—deeply influenced by traditional Indian wall painting from Maharashtra.
+                    </p>
+                    <p>
+                        Traditional ritual paintings in this style are created on the inside walls of village huts. The walls are made of branches, earth, and red brick, giving a red ochre background. Artists paint using only white pigment made from rice flour and water, with gum as a binder. These simple materials produce profound geometric expressions of life, community, and nature.
+                    </p>
+                    <p>
+                        Abhilasha has evolved this heritage through extensive travel across twenty states in India, as well as journeys to Egypt and Albuquerque, New Mexico. She observed striking similarities in geometric patterns and humanity’s relationship with nature across cultures. Her work explores how technology and economics shape our inner and outer worlds—revealing the invisible connections that bind us all.
+                    </p>
+                    <div class="pt-2 text-sm text-[#666]">
+                        Bay Area, California
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Selected Work -->
+    <section id="work" class="max-w-5xl mx-auto px-6 py-14">
+        <div class="flex items-baseline justify-between mb-6">
+            <div>
+                <div class="section-title">Selected Works</div>
+                <div class="serif text-4xl font-semibold tracking-[-1.5px]">Four pieces</div>
+            </div>
+            <div class="text-sm text-[#666] hidden md:block">2024 — 2026</div>
+        </div>
+
+        <!-- 2x2 Gallery Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Artwork 1: The Loom of Life -->
+            <div onclick="openLightbox(0)" class="portfolio-card group">
+                <div class="art-frame clean-border rounded-sm overflow-hidden mb-3 bg-white">
+                    <img src="images/artwork-1.jpg" alt="The Loom of Life by Abhilasha Gulhane" 
+                         class="gallery-img aspect-[4/3] md:aspect-[16/11] transition-transform duration-500 group-hover:scale-[1.015]">
+                </div>
+                <div class="px-0.5">
+                    <div class="flex justify-between items-baseline">
+                        <div>
+                            <div class="artwork-title font-medium">The Loom of Life</div>
+                            <div class="text-xs text-[#666]">Acrylic on canvas • approx. 36 × 48 in</div>
+                        </div>
+                        <div class="text-[10px] font-mono text-[#999] group-hover:text-[#555] transition">01</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Artwork 2: The Collective Current -->
+            <div onclick="openLightbox(1)" class="portfolio-card group">
+                <div class="art-frame clean-border rounded-sm overflow-hidden mb-3 bg-white">
+                    <img src="images/artwork-2.jpg" alt="The Collective Current by Abhilasha Gulhane" 
+                         class="gallery-img aspect-[4/3] md:aspect-[16/11] transition-transform duration-500 group-hover:scale-[1.015]">
+                </div>
+                <div class="px-0.5">
+                    <div class="flex justify-between items-baseline">
+                        <div>
+                            <div class="artwork-title font-medium">The Collective Current</div>
+                            <div class="text-xs text-[#666]">Acrylic on canvas • approx. 30 × 45 in</div>
+                        </div>
+                        <div class="text-[10px] font-mono text-[#999] group-hover:text-[#555] transition">02</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Artwork 3: Trilogy of Consciousness -->
+            <div onclick="openLightbox(2)" class="portfolio-card group">
+                <div class="art-frame clean-border rounded-sm overflow-hidden mb-3 bg-white">
+                    <img src="images/artwork-3.jpg" alt="Trilogy of Consciousness by Abhilasha Gulhane" 
+                         class="gallery-img aspect-[4/3] md:aspect-[16/11] transition-transform duration-500 group-hover:scale-[1.015]">
+                </div>
+                <div class="px-0.5">
+                    <div class="flex justify-between items-baseline">
+                        <div>
+                            <div class="artwork-title font-medium">Trilogy of Consciousness</div>
+                            <div class="text-xs text-[#666]">Acrylic on canvas, triptych • approx. 48 × 48 in overall</div>
+                        </div>
+                        <div class="text-[10px] font-mono text-[#999] group-hover:text-[#555] transition">03</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Artwork 4: The Seer (Devi of Patterns) -->
+            <div onclick="openLightbox(3)" class="portfolio-card group">
+                <div class="art-frame clean-border rounded-sm overflow-hidden mb-3 bg-white">
+                    <img src="images/artwork-4.jpg" alt="The Seer (Devi of Patterns) by Abhilasha Gulhane" 
+                         class="gallery-img aspect-[4/3] md:aspect-[16/11] transition-transform duration-500 group-hover:scale-[1.015]">
+                </div>
+                <div class="px-0.5">
+                    <div class="flex justify-between items-baseline">
+                        <div>
+                            <div class="artwork-title font-medium">The Seer (Devi of Patterns)</div>
+                            <div class="text-xs text-[#666]">Acrylic on canvas • approx. 30 × 42 in</div>
+                        </div>
+                        <div class="text-[10px] font-mono text-[#999] group-hover:text-[#555] transition">04</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-6 text-[13px] text-[#666]">
+            Click any artwork to view larger with full description. All pieces are acrylic abstracts in the Modern Warli tradition.
+        </div>
+    </section>
+
+    <!-- Artist Statement -->
+    <section id="statement" class="border-t border-[#e8e4dc] bg-white py-12">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="max-w-3xl">
+                <div class="section-title mb-2">Artist Statement</div>
+                <h2 class="serif text-4xl tracking-tight font-semibold mb-8">Artist Statement</h2>
+                
+                <div class="space-y-6 text-[15.5px] leading-relaxed text-[#333]">
+                    <p>
+                        My art bridges technology and economics with the poetic, rhythmic geometries of traditional Indian folk painting from Maharashtra. My grandmother painted on the walls of our home using rice paste on earth and brick. That living tradition lives in my practice today. I explore stillness, humans, geometry, and nature. Through rhythmic white linework, I investigate how technology shapes our inner and outer worlds—how economic systems flow like rivers, how communities form patterns, and how ancient wisdom still speaks to modern life.
+                    </p>
+                    <p>
+                        Extensive travel across India, Egypt, and Native American lands revealed to me the same geometric patterns repeating across cultures—the same circles, triangles, and spirals that speak of balance and connection. My work is an invitation to see these invisible threads that connect technology, economy, and the human spirit.
+                    </p>
+                </div>
+                
+                <div class="mt-8 text-sm text-[#666]">
+                    — Abhilasha Gulhane
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-[#e8e4dc] py-9">
+        <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row md:items-center justify-between gap-y-4 text-sm text-[#666]">
+            <div>
+                © Abhilasha Gulhane. All rights reserved.
+            </div>
+            <div class="flex gap-x-5">
+                <a href="Abhilasha_Gulhane_Artist_Portfolio_Optimized.pdf" target="_blank" class="hover:text-[#222]">Download PDF portfolio</a>
+                <span class="text-[#ccc]">·</span>
+                <span class="text-xs px-2 py-0.5 rounded bg-[#f1eee8]">Hosted on GitHub Pages</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" onclick="closeLightbox()" 
+         class="hidden fixed inset-0 bg-black/90 z-[100] flex items-center justify-center p-4 md:p-10">
+        <div onclick="event.stopImmediatePropagation()" 
+             class="modal relative max-w-[1100px] w-full">
+            
+            <button onclick="closeLightbox()" 
+                    class="absolute -top-3 -right-3 md:-top-4 md:-right-4 w-10 h-10 bg-white rounded-full flex items-center justify-center text-[#222] shadow hover:bg-[#f9f7f4] z-10">
+                <i class="fa-solid fa-times text-xl"></i>
+            </button>
+
+            <div class="bg-white shadow-2xl overflow-hidden">
+                <div class="flex flex-col lg:flex-row">
+                    <!-- Image -->
+                    <div class="lg:w-3/5 bg-[#f9f7f4]">
+                        <img id="lightbox-image" class="w-full h-auto max-h-[82vh] object-contain" alt="">
+                    </div>
+                    <!-- Info -->
+                    <div class="lg:w-2/5 p-8 md:p-10 flex flex-col">
+                        <div>
+                            <div id="lightbox-title" class="font-semibold text-2xl tracking-tight text-[#222]"></div>
+                            <div id="lightbox-meta" class="text-[#666] mt-1 text-sm"></div>
+                        </div>
+                        <div id="lightbox-description" class="mt-6 text-[14.5px] leading-relaxed text-[#333] flex-1">
+                        </div>
+                        <div class="mt-auto pt-6 text-xs text-[#888]">
+                            From the 2026 Portfolio • Modern Warli acrylic abstracts
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-3 text-white/60 text-xs px-1 flex justify-between">
+                <div>ESC to close • ← → to navigate</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Exact data from the PDF (titles, mediums, and full descriptions)
+        const artworks = [
+            {
+                src: "images/artwork-1.jpg",
+                title: "The Loom of Life",
+                meta: "Acrylic on canvas • approx. 36 × 48 in",
+                description: "This intricate composition weaves village life—houses, boats, fish, and geometric symbols—with an ornate central form that merges sacred Warli chauk motifs and the folded architecture of the human brain. White linework on deep burgundy evokes the interconnected threads of community, economy, and cognition, honoring Warli’s celebration of daily existence while illuminating modern systemic complexity."
+            },
+            {
+                src: "images/artwork-2.jpg",
+                title: "The Collective Current",
+                meta: "Acrylic on canvas • approx. 30 × 45 in",
+                description: "A majestic fish, its body alive with Warli-inspired geometric patterns, moves through a sea that transitions from earth to sky. Above it, a cloud-brain formation blooms with symbolic motifs, suggesting collective mind and shared intelligence. The work explores flow—of ideas, economies, and communities—rooted in the organic geometries of traditional Warli yet speaking directly to contemporary systems thinking."
+            },
+            {
+                src: "images/artwork-3.jpg",
+                title: "Trilogy of Consciousness",
+                meta: "Acrylic on canvas, triptych • approx. 48 × 48 in overall",
+                description: "This powerful triptych traces the architecture of awareness across three panels: the cosmic eye and sacred triangle of perception; the branching, cloud-crowned tree of growth and communal bonds; and the radiant face of selfhood, its mind mapped with intricate patterns. Each panel pulses with Warli’s geometric heartbeat, reimagined as a journey from individual insight to collective wisdom and back again."
+            },
+            {
+                src: "images/artwork-4.jpg",
+                title: "The Seer (Devi of Patterns)",
+                meta: "Acrylic on canvas • approx. 30 × 42 in",
+                description: "A commanding female figure gazes outward with a single, focused eye containing a sacred triangle. Her elaborate headdress radiates like thought itself—Warli patterns transformed into a crown of connections. The rhythmic linework around her celebrates the feminine divine and the weaving of social and economic tapestries, inviting contemplation of intuition, community, and the power of patterned thought."
+            }
+        ];
+
+        let currentIndex = 0;
+
+        function openLightbox(index) {
+            currentIndex = index;
+            const modal = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-image');
+            const titleEl = document.getElementById('lightbox-title');
+            const metaEl = document.getElementById('lightbox-meta');
+            const descEl = document.getElementById('lightbox-description');
+
+            const art = artworks[index];
+            img.src = art.src;
+            titleEl.textContent = art.title;
+            metaEl.textContent = art.meta;
+            descEl.textContent = art.description;
+
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            
+            document.addEventListener('keydown', handleKey, { once: true });
+        }
+
+        function closeLightbox() {
+            const modal = document.getElementById('lightbox');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+        }
+
+        function handleKey(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+            if (e.key === 'ArrowRight') {
+                currentIndex = (currentIndex + 1) % artworks.length;
+                openLightbox(currentIndex);
+            }
+            if (e.key === 'ArrowLeft') {
+                currentIndex = (currentIndex - 1 + artworks.length) % artworks.length;
+                openLightbox(currentIndex);
+            }
+        }
+
+        // Bonus: keyboard hint on gallery
+        function initGalleryHints() {
+            const cards = document.querySelectorAll('.portfolio-card');
+            cards.forEach((card, i) => {
+                card.setAttribute('title', 'Click to enlarge (or use arrow keys in lightbox)');
+            });
+        }
+
+        // Initialize everything
+        function init() {
+            initGalleryHints();
+
+            // Press "?" to jump to work section
+            document.addEventListener('keypress', function(e) {
+                if (e.key === '?') {
+                    document.getElementById('work').scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+
+            console.log('%c[Portfolio] Abhilasha Gulhane 2026 site ready with real extracted artworks.', 'color:#999');
+        }
+
+        window.onload = init;
+        window.AG_openArtwork = openLightbox;
+    </script>
+</body>
+</html>
