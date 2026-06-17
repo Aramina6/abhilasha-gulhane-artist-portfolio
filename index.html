@@ -109,6 +109,39 @@
                         0 0 0 15px #f1f1f1,
                         0 10px 30px -10px rgb(0 0 0 / 0.15);
         }
+
+        .collection-anchor {
+            font-size: 12px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #666;
+            transition: color 0.15s ease;
+        }
+
+        .collection-anchor:hover,
+        .collection-anchor.active {
+            color: #111;
+        }
+
+        .format-label {
+            font-size: 11px;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: #888;
+            font-weight: 500;
+        }
+
+        .format-measure {
+            font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+            font-size: 13px;
+            color: #999;
+            font-weight: 500;
+        }
+
+        .collection-divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #e8e4dc 12%, #e8e4dc 88%, transparent);
+        }
     </style>
 </head>
 <body class="bg-[#f9f7f4] text-[#222]">
@@ -195,89 +228,51 @@
         </div>
     </section>
 
-    <!-- Selected Work -->
+    <!-- Work -->
     <section id="work" class="max-w-5xl mx-auto px-6 py-14">
-        <div class="flex items-baseline justify-between mb-6">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
             <div>
-                <div class="section-title">Selected Works</div>
-                <div class="serif text-4xl font-semibold tracking-[-1.5px]">Four pieces</div>
+                <div class="section-title">Work</div>
+                <div class="serif text-4xl font-semibold tracking-[-1.5px]">Collections</div>
             </div>
-            <div class="text-sm text-[#666] hidden md:block">2024 — 2026</div>
-        </div>
-
-        <!-- 2x2 Gallery Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <!-- Artwork 1: The Loom of Life -->
-            <div onclick="openLightbox(0)" class="portfolio-card group">
-                <div class="art-frame clean-border rounded-sm overflow-hidden mb-3 bg-white">
-                    <img src="images/artwork-1.jpg" alt="The Loom of Life by Abhilasha Gulhane" 
-                         class="gallery-img aspect-[4/3] md:aspect-[16/11] transition-transform duration-500 group-hover:scale-[1.015]">
-                </div>
-                <div class="px-0.5">
-                    <div class="flex justify-between items-baseline">
-                        <div>
-                            <div class="artwork-title font-medium">The Loom of Life</div>
-                            <div class="text-xs text-[#666]">Acrylic on canvas • approx. 36 × 48 in</div>
-                        </div>
-                        <div class="text-[10px] font-mono text-[#999] group-hover:text-[#555] transition">01</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Artwork 2: The Collective Current -->
-            <div onclick="openLightbox(1)" class="portfolio-card group">
-                <div class="art-frame clean-border rounded-sm overflow-hidden mb-3 bg-white">
-                    <img src="images/artwork-2.jpg" alt="The Collective Current by Abhilasha Gulhane" 
-                         class="gallery-img aspect-[4/3] md:aspect-[16/11] transition-transform duration-500 group-hover:scale-[1.015]">
-                </div>
-                <div class="px-0.5">
-                    <div class="flex justify-between items-baseline">
-                        <div>
-                            <div class="artwork-title font-medium">The Collective Current</div>
-                            <div class="text-xs text-[#666]">Acrylic on canvas • approx. 30 × 45 in</div>
-                        </div>
-                        <div class="text-[10px] font-mono text-[#999] group-hover:text-[#555] transition">02</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Artwork 3: Trilogy of Consciousness -->
-            <div onclick="openLightbox(2)" class="portfolio-card group">
-                <div class="art-frame clean-border rounded-sm overflow-hidden mb-3 bg-white">
-                    <img src="images/artwork-3.jpg" alt="Trilogy of Consciousness by Abhilasha Gulhane" 
-                         class="gallery-img aspect-[4/3] md:aspect-[16/11] transition-transform duration-500 group-hover:scale-[1.015]">
-                </div>
-                <div class="px-0.5">
-                    <div class="flex justify-between items-baseline">
-                        <div>
-                            <div class="artwork-title font-medium">Trilogy of Consciousness</div>
-                            <div class="text-xs text-[#666]">Acrylic on canvas, triptych • approx. 48 × 48 in overall</div>
-                        </div>
-                        <div class="text-[10px] font-mono text-[#999] group-hover:text-[#555] transition">03</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Artwork 4: The Seer (Devi of Patterns) -->
-            <div onclick="openLightbox(3)" class="portfolio-card group">
-                <div class="art-frame clean-border rounded-sm overflow-hidden mb-3 bg-white">
-                    <img src="images/artwork-4.jpg" alt="The Seer (Devi of Patterns) by Abhilasha Gulhane" 
-                         class="gallery-img aspect-[4/3] md:aspect-[16/11] transition-transform duration-500 group-hover:scale-[1.015]">
-                </div>
-                <div class="px-0.5">
-                    <div class="flex justify-between items-baseline">
-                        <div>
-                            <div class="artwork-title font-medium">The Seer (Devi of Patterns)</div>
-                            <div class="text-xs text-[#666]">Acrylic on canvas • approx. 30 × 42 in</div>
-                        </div>
-                        <div class="text-[10px] font-mono text-[#999] group-hover:text-[#555] transition">04</div>
-                    </div>
-                </div>
+            <div class="flex flex-wrap gap-x-5 gap-y-2 text-sm">
+                <a href="#collection-1" class="collection-anchor">Collection 1</a>
+                <a href="#foundational-works" class="collection-anchor">Earlier Works</a>
             </div>
         </div>
 
-        <div class="mt-6 text-[13px] text-[#666]">
-            Click any artwork to view larger with full description. All pieces are acrylic abstracts in the Modern Warli tradition.
+        <!-- Collection 1 -->
+        <div id="collection-1" class="mb-16 scroll-mt-24">
+            <div class="mb-10">
+                <div class="format-label mb-2">Collection 1</div>
+                <h2 class="serif text-3xl md:text-[2.35rem] font-semibold tracking-tight leading-tight">
+                    Human Mind and Technology Ecosystem
+                </h2>
+                <p class="mt-3 max-w-2xl text-[15px] text-[#555] leading-relaxed">
+                    A 2026 series in white acrylic line work on deep burgundy and navy grounds — mapping how thought,
+                    circuitry, and living systems share the same geometry.
+                </p>
+                <div class="mt-4 text-xs text-[#888] tracking-wide">2026 · Acrylic on canvas · Modern Warli tradition</div>
+            </div>
+
+            <div id="gallery-collection-1"></div>
+        </div>
+
+        <div class="collection-divider my-14"></div>
+
+        <!-- Earlier Works -->
+        <div id="foundational-works" class="scroll-mt-24">
+            <div class="mb-8">
+                <div class="format-label mb-2">Earlier Works</div>
+                <h2 class="serif text-3xl font-semibold tracking-tight">Foundational Pieces</h2>
+                <p class="mt-2 text-sm text-[#666]">Selected works from the original 2024–2026 portfolio.</p>
+            </div>
+
+            <div id="gallery-foundational"></div>
+        </div>
+
+        <div class="mt-8 text-[13px] text-[#666]">
+            Click any artwork to view larger with full description. Navigate with ← → inside the lightbox.
         </div>
     </section>
 
@@ -350,7 +345,7 @@
                         <div id="lightbox-description" class="mt-6 text-[14.5px] leading-relaxed text-[#333] flex-1">
                         </div>
                         <div class="mt-auto pt-6 text-xs text-[#888]">
-                            From the 2026 Portfolio • Modern Warli acrylic abstracts
+                            Human Mind and Technology Ecosystem · Modern Warli acrylic abstracts
                         </div>
                     </div>
                 </div>
@@ -363,35 +358,214 @@
     </div>
 
     <script>
-        // Exact data from the PDF (titles, mediums, and full descriptions)
-        const artworks = [
+        const collectionOneFormats = [
             {
-                src: "images/artwork-1.jpg",
-                title: "The Loom of Life",
-                meta: "Acrylic on canvas • approx. 36 × 48 in",
-                description: "This intricate composition weaves village life—houses, boats, fish, and geometric symbols—with an ornate central form that merges sacred Warli chauk motifs and the folded architecture of the human brain. White linework on deep burgundy evokes the interconnected threads of community, economy, and cognition, honoring Warli’s celebration of daily existence while illuminating modern systemic complexity."
+                id: 'monument',
+                label: 'Monument Canvases',
+                measure: '24 × 36 in',
+                note: 'Grand vertical format',
+                gridClass: 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3',
+                aspectClass: 'aspect-[2/3]',
+                works: [
+                    {
+                        src: 'images/collection-1/monument/monument-01.jpg',
+                        title: 'The Living Circuit',
+                        meta: 'Acrylic on canvas • 24 × 36 in',
+                        description: 'DNA-like strands, gears, and a seed-form tablet rise through a central column, anchored by a blooming flower below. Scattered boats and village symbols orbit the composition — a monument to how biology, craft, and technology share one living network.'
+                    },
+                    {
+                        src: 'images/collection-1/monument/monument-02.jpg',
+                        title: 'Mindstream',
+                        meta: 'Acrylic on canvas • 24 × 36 in',
+                        description: 'A circuit-cloud of rectangular chambers pours data-like tendrils into a patterned fish below. Burgundy sky meets navy water as sun-discs and mandala motifs pulse through the field — flow as the language of mind, economy, and ecosystem.'
+                    },
+                    {
+                        src: 'images/collection-1/monument/monument-03.jpg',
+                        title: 'The Pattern Oracle',
+                        meta: 'Acrylic on canvas • 24 × 36 in',
+                        description: 'A crowned feminine figure gazes through a single eye holding a sacred triangle. Radiating swirls and geometric bands cascade from an elaborate headdress — intuition rendered as architecture, pattern as power.'
+                    }
+                ]
             },
             {
-                src: "images/artwork-2.jpg",
-                title: "The Collective Current",
-                meta: "Acrylic on canvas • approx. 30 × 45 in",
-                description: "A majestic fish, its body alive with Warli-inspired geometric patterns, moves through a sea that transitions from earth to sky. Above it, a cloud-brain formation blooms with symbolic motifs, suggesting collective mind and shared intelligence. The work explores flow—of ideas, economies, and communities—rooted in the organic geometries of traditional Warli yet speaking directly to contemporary systems thinking."
+                id: 'horizon',
+                label: 'Horizon Triptychs',
+                measure: '12 × 36 in per panel · three panels',
+                note: 'Single image, three connected canvases',
+                gridClass: 'grid-cols-1 max-w-4xl mx-auto',
+                aspectClass: 'aspect-[3/1]',
+                works: [
+                    {
+                        src: 'images/collection-1/horizon/horizon-01.jpg',
+                        title: 'Spectrum of Awareness',
+                        meta: 'Acrylic on canvas, triptych • 12 × 36 in per panel',
+                        description: 'Three tall panels trace perception from cosmic eye and suspended triangle, through a dotted cloud-tree of communal growth, to a radiant face mapped with circuitry and a tiered pyramid of collective symbols. Burgundy and navy grounds shift like states of mind.'
+                    }
+                ]
             },
             {
-                src: "images/artwork-3.jpg",
-                title: "Trilogy of Consciousness",
-                meta: "Acrylic on canvas, triptych • approx. 48 × 48 in overall",
-                description: "This powerful triptych traces the architecture of awareness across three panels: the cosmic eye and sacred triangle of perception; the branching, cloud-crowned tree of growth and communal bonds; and the radiant face of selfhood, its mind mapped with intricate patterns. Each panel pulses with Warli’s geometric heartbeat, reimagined as a journey from individual insight to collective wisdom and back again."
-            },
-            {
-                src: "images/artwork-4.jpg",
-                title: "The Seer (Devi of Patterns)",
-                meta: "Acrylic on canvas • approx. 30 × 42 in",
-                description: "A commanding female figure gazes outward with a single, focused eye containing a sacred triangle. Her elaborate headdress radiates like thought itself—Warli patterns transformed into a crown of connections. The rhythmic linework around her celebrates the feminine divine and the weaving of social and economic tapestries, inviting contemplation of intuition, community, and the power of patterned thought."
+                id: 'intimate',
+                label: 'Intimate Studies',
+                measure: '18 × 24 in',
+                note: 'Studio-scale format',
+                gridClass: 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3',
+                aspectClass: 'aspect-[3/4]',
+                works: [
+                    {
+                        src: 'images/collection-1/intimate/intimate-01.jpg',
+                        title: 'Dual Hemisphere',
+                        meta: 'Acrylic on canvas • 18 × 24 in',
+                        description: 'Navy mind-maps and terracotta tech-grids face each other across a vertical divide, bridged by a central eye. Rockets, satellites, and village life orbit a swirling neural head — the inner and outer worlds in conversation.'
+                    },
+                    {
+                        src: 'images/collection-1/intimate/intimate-02.jpg',
+                        title: 'Between Worlds',
+                        meta: 'Acrylic on canvas • 18 × 24 in',
+                        description: 'Patterned sailboats navigate a warm shore while a marine column blooms on deep blue — turtle, coral, and sea life connected by a scalloped bridge form. Exploration and ecosystem as two halves of one current.'
+                    },
+                    {
+                        src: 'images/collection-1/intimate/intimate-03.jpg',
+                        title: 'Cosmos & Collective',
+                        meta: 'Acrylic on canvas • 18 × 24 in',
+                        description: 'Stars and a radiating crescent moon fill the navy left field; terracotta right holds floating architecture and chains of walking figures. A vertical boundary asks where the universe ends and human society begins.'
+                    },
+                    {
+                        src: 'images/collection-1/intimate/intimate-04.jpg',
+                        title: 'Neural Blueprint',
+                        meta: 'Acrylic on canvas • 18 × 24 in',
+                        description: 'A profile head becomes a circuit city — rectangular chambers and pathways inside the brain extend as data-stream hair into schematic structures. Mind as both map and machine.'
+                    },
+                    {
+                        src: 'images/collection-1/intimate/intimate-05.jpg',
+                        title: 'Consciousness Hub',
+                        meta: 'Acrylic on canvas • 18 × 24 in',
+                        description: 'A multi-eyed central form sends wave-signals leftward while circular vignettes right depict daily life — transit, dance, screens, and shelter. The mind as hub of every human ecosystem.'
+                    },
+                    {
+                        src: 'images/collection-1/intimate/intimate-06.jpg',
+                        title: 'Mind Garden',
+                        meta: 'Acrylic on canvas • 18 × 24 in',
+                        description: 'A geometric flower straddles navy and terracotta fields, its petals dense with dots and triangles. A botanical branch, butterfly, and chain of symbolic figures extend the bloom into living ecosystem.'
+                    }
+                ]
             }
         ];
 
+        const foundationalWorks = [
+            {
+                src: 'images/artwork-1.jpg',
+                title: 'The Loom of Life',
+                meta: 'Acrylic on canvas • approx. 36 × 48 in',
+                description: 'This intricate composition weaves village life—houses, boats, fish, and geometric symbols—with an ornate central form that merges sacred Warli chauk motifs and the folded architecture of the human brain. White linework on deep burgundy evokes the interconnected threads of community, economy, and cognition, honoring Warli’s celebration of daily existence while illuminating modern systemic complexity.'
+            },
+            {
+                src: 'images/artwork-2.jpg',
+                title: 'The Collective Current',
+                meta: 'Acrylic on canvas • approx. 30 × 45 in',
+                description: 'A majestic fish, its body alive with Warli-inspired geometric patterns, moves through a sea that transitions from earth to sky. Above it, a cloud-brain formation blooms with symbolic motifs, suggesting collective mind and shared intelligence. The work explores flow—of ideas, economies, and communities—rooted in the organic geometries of traditional Warli yet speaking directly to contemporary systems thinking.'
+            },
+            {
+                src: 'images/artwork-3.jpg',
+                title: 'Trilogy of Consciousness',
+                meta: 'Acrylic on canvas, triptych • approx. 48 × 48 in overall',
+                description: 'This powerful triptych traces the architecture of awareness across three panels: the cosmic eye and sacred triangle of perception; the branching, cloud-crowned tree of growth and communal bonds; and the radiant face of selfhood, its mind mapped with intricate patterns. Each panel pulses with Warli’s geometric heartbeat, reimagined as a journey from individual insight to collective wisdom and back again.'
+            },
+            {
+                src: 'images/artwork-4.jpg',
+                title: 'The Seer (Devi of Patterns)',
+                meta: 'Acrylic on canvas • approx. 30 × 42 in',
+                description: 'A commanding female figure gazes outward with a single, focused eye containing a sacred triangle. Her elaborate headdress radiates like thought itself—Warli patterns transformed into a crown of connections. The rhythmic linework around her celebrates the feminine divine and the weaving of social and economic tapestries, inviting contemplation of intuition, community, and the power of patterned thought.'
+            }
+        ];
+
+        const artworks = [
+            ...collectionOneFormats.flatMap(format => format.works),
+            ...foundationalWorks
+        ];
+
         let currentIndex = 0;
+        let keyHandlerAttached = false;
+
+        function artworkIndex(src) {
+            return artworks.findIndex(art => art.src === src);
+        }
+
+        function renderFormatGroup(format, startIndex) {
+            const cards = format.works.map((work, offset) => {
+                const index = startIndex + offset;
+                const number = String(index + 1).padStart(2, '0');
+                return `
+                    <div onclick="openLightbox(${index})" class="portfolio-card group" title="Click to enlarge">
+                        <div class="art-frame clean-border rounded-sm overflow-hidden mb-3 bg-white">
+                            <img src="${work.src}" alt="${work.title} by Abhilasha Gulhane"
+                                 class="gallery-img ${format.aspectClass} transition-transform duration-500 group-hover:scale-[1.015]">
+                        </div>
+                        <div class="px-0.5">
+                            <div class="flex justify-between items-baseline gap-3">
+                                <div>
+                                    <div class="artwork-title font-medium">${work.title}</div>
+                                    <div class="text-xs text-[#666]">${work.meta}</div>
+                                </div>
+                                <div class="text-[10px] font-mono text-[#999] group-hover:text-[#555] transition shrink-0">${number}</div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            return `
+                <div id="format-${format.id}" class="mb-12 last:mb-0 scroll-mt-28">
+                    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-2 mb-5 pb-4 border-b border-[#ece8df]">
+                        <div>
+                            <div class="heading-font text-lg text-[#222]">${format.label}</div>
+                            <div class="format-measure mt-0.5">${format.measure}</div>
+                        </div>
+                        <div class="text-xs text-[#999]">${format.note}</div>
+                    </div>
+                    <div class="grid ${format.gridClass} gap-6">
+                        ${cards}
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderCollectionOne() {
+            const container = document.getElementById('gallery-collection-1');
+            let index = 0;
+            container.innerHTML = collectionOneFormats.map(format => {
+                const html = renderFormatGroup(format, index);
+                index += format.works.length;
+                return html;
+            }).join('');
+        }
+
+        function renderFoundationalWorks() {
+            const container = document.getElementById('gallery-foundational');
+            const startIndex = collectionOneFormats.reduce((sum, format) => sum + format.works.length, 0);
+            const cards = foundationalWorks.map((work, offset) => {
+                const index = startIndex + offset;
+                const number = String(offset + 1).padStart(2, '0');
+                return `
+                    <div onclick="openLightbox(${index})" class="portfolio-card group" title="Click to enlarge">
+                        <div class="art-frame clean-border rounded-sm overflow-hidden mb-3 bg-white">
+                            <img src="${work.src}" alt="${work.title} by Abhilasha Gulhane"
+                                 class="gallery-img aspect-[4/3] md:aspect-[16/11] transition-transform duration-500 group-hover:scale-[1.015]">
+                        </div>
+                        <div class="px-0.5">
+                            <div class="flex justify-between items-baseline gap-3">
+                                <div>
+                                    <div class="artwork-title font-medium">${work.title}</div>
+                                    <div class="text-xs text-[#666]">${work.meta}</div>
+                                </div>
+                                <div class="text-[10px] font-mono text-[#999] group-hover:text-[#555] transition shrink-0">${number}</div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            container.innerHTML = `<div class="grid grid-cols-1 md:grid-cols-2 gap-6">${cards}</div>`;
+        }
 
         function openLightbox(index) {
             currentIndex = index;
@@ -403,14 +577,18 @@
 
             const art = artworks[index];
             img.src = art.src;
+            img.alt = `${art.title} by Abhilasha Gulhane`;
             titleEl.textContent = art.title;
             metaEl.textContent = art.meta;
             descEl.textContent = art.description;
 
             modal.classList.remove('hidden');
             modal.classList.add('flex');
-            
-            document.addEventListener('keydown', handleKey, { once: true });
+
+            if (!keyHandlerAttached) {
+                document.addEventListener('keydown', handleKey);
+                keyHandlerAttached = true;
+            }
         }
 
         function closeLightbox() {
@@ -420,6 +598,9 @@
         }
 
         function handleKey(e) {
+            const modal = document.getElementById('lightbox');
+            if (modal.classList.contains('hidden')) return;
+
             if (e.key === 'Escape') {
                 closeLightbox();
             }
@@ -433,26 +614,17 @@
             }
         }
 
-        // Bonus: keyboard hint on gallery
-        function initGalleryHints() {
-            const cards = document.querySelectorAll('.portfolio-card');
-            cards.forEach((card, i) => {
-                card.setAttribute('title', 'Click to enlarge (or use arrow keys in lightbox)');
-            });
-        }
-
-        // Initialize everything
         function init() {
-            initGalleryHints();
+            renderCollectionOne();
+            renderFoundationalWorks();
 
-            // Press "?" to jump to work section
             document.addEventListener('keypress', function(e) {
                 if (e.key === '?') {
                     document.getElementById('work').scrollIntoView({ behavior: 'smooth' });
                 }
             });
 
-            console.log('%c[Portfolio] Abhilasha Gulhane 2026 site ready with real extracted artworks.', 'color:#999');
+            console.log('%c[Portfolio] Collection 1 loaded — 10 new works + 4 foundational pieces.', 'color:#999');
         }
 
         window.onload = init;
