@@ -237,7 +237,6 @@
             </div>
             <div class="flex flex-wrap gap-x-5 gap-y-2 text-sm">
                 <a href="#collection-1" class="collection-anchor">Collection 1</a>
-                <a href="#foundational-works" class="collection-anchor">Earlier Works</a>
             </div>
         </div>
 
@@ -256,19 +255,6 @@
             </div>
 
             <div id="gallery-collection-1"></div>
-        </div>
-
-        <div class="collection-divider my-14"></div>
-
-        <!-- Earlier Works -->
-        <div id="foundational-works" class="scroll-mt-24">
-            <div class="mb-8">
-                <div class="format-label mb-2">Earlier Works</div>
-                <h2 class="serif text-3xl font-semibold tracking-tight">Foundational Pieces</h2>
-                <p class="mt-2 text-sm text-[#666]">Selected works from the original 2024–2026 portfolio.</p>
-            </div>
-
-            <div id="gallery-foundational"></div>
         </div>
 
         <div class="mt-8 text-[13px] text-[#666]">
@@ -451,36 +437,8 @@
             }
         ];
 
-        const foundationalWorks = [
-            {
-                src: 'images/artwork-1.jpg',
-                title: 'The Loom of Life',
-                meta: 'Acrylic on canvas • approx. 36 × 48 in',
-                description: 'This intricate composition weaves village life—houses, boats, fish, and geometric symbols—with an ornate central form that merges sacred Warli chauk motifs and the folded architecture of the human brain. White linework on deep burgundy evokes the interconnected threads of community, economy, and cognition, honoring Warli’s celebration of daily existence while illuminating modern systemic complexity.'
-            },
-            {
-                src: 'images/artwork-2.jpg',
-                title: 'The Collective Current',
-                meta: 'Acrylic on canvas • approx. 30 × 45 in',
-                description: 'A majestic fish, its body alive with Warli-inspired geometric patterns, moves through a sea that transitions from earth to sky. Above it, a cloud-brain formation blooms with symbolic motifs, suggesting collective mind and shared intelligence. The work explores flow—of ideas, economies, and communities—rooted in the organic geometries of traditional Warli yet speaking directly to contemporary systems thinking.'
-            },
-            {
-                src: 'images/artwork-3.jpg',
-                title: 'Trilogy of Consciousness',
-                meta: 'Acrylic on canvas, triptych • approx. 48 × 48 in overall',
-                description: 'This powerful triptych traces the architecture of awareness across three panels: the cosmic eye and sacred triangle of perception; the branching, cloud-crowned tree of growth and communal bonds; and the radiant face of selfhood, its mind mapped with intricate patterns. Each panel pulses with Warli’s geometric heartbeat, reimagined as a journey from individual insight to collective wisdom and back again.'
-            },
-            {
-                src: 'images/artwork-4.jpg',
-                title: 'The Seer (Devi of Patterns)',
-                meta: 'Acrylic on canvas • approx. 30 × 42 in',
-                description: 'A commanding female figure gazes outward with a single, focused eye containing a sacred triangle. Her elaborate headdress radiates like thought itself—Warli patterns transformed into a crown of connections. The rhythmic linework around her celebrates the feminine divine and the weaving of social and economic tapestries, inviting contemplation of intuition, community, and the power of patterned thought.'
-            }
-        ];
-
         const artworks = [
-            ...collectionOneFormats.flatMap(format => format.works),
-            ...foundationalWorks
+            ...collectionOneFormats.flatMap(format => format.works)
         ];
 
         let currentIndex = 0;
@@ -539,34 +497,6 @@
             }).join('');
         }
 
-        function renderFoundationalWorks() {
-            const container = document.getElementById('gallery-foundational');
-            const startIndex = collectionOneFormats.reduce((sum, format) => sum + format.works.length, 0);
-            const cards = foundationalWorks.map((work, offset) => {
-                const index = startIndex + offset;
-                const number = String(offset + 1).padStart(2, '0');
-                return `
-                    <div onclick="openLightbox(${index})" class="portfolio-card group" title="Click to enlarge">
-                        <div class="art-frame clean-border rounded-sm overflow-hidden mb-3 bg-white">
-                            <img src="${work.src}" alt="${work.title} by Abhilasha Gulhane"
-                                 class="gallery-img aspect-[4/3] md:aspect-[16/11] transition-transform duration-500 group-hover:scale-[1.015]">
-                        </div>
-                        <div class="px-0.5">
-                            <div class="flex justify-between items-baseline gap-3">
-                                <div>
-                                    <div class="artwork-title font-medium">${work.title}</div>
-                                    <div class="text-xs text-[#666]">${work.meta}</div>
-                                </div>
-                                <div class="text-[10px] font-mono text-[#999] group-hover:text-[#555] transition shrink-0">${number}</div>
-                            </div>
-                        </div>
-                    </div>
-                `;
-            }).join('');
-
-            container.innerHTML = `<div class="grid grid-cols-1 md:grid-cols-2 gap-6">${cards}</div>`;
-        }
-
         function openLightbox(index) {
             currentIndex = index;
             const modal = document.getElementById('lightbox');
@@ -616,7 +546,6 @@
 
         function init() {
             renderCollectionOne();
-            renderFoundationalWorks();
 
             document.addEventListener('keypress', function(e) {
                 if (e.key === '?') {
@@ -624,7 +553,7 @@
                 }
             });
 
-            console.log('%c[Portfolio] Collection 1 loaded — 10 new works + 4 foundational pieces.', 'color:#999');
+            console.log('%c[Portfolio] Collection 1 loaded.', 'color:#999');
         }
 
         window.onload = init;
