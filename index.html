@@ -29,34 +29,25 @@
         }
 
         .art-frame {
-            background: white;
-            padding: 12px;
-            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 
-                       0 4px 6px -4px rgb(0 0 0 / 0.1);
-            transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
-                        box-shadow 0.2s;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.15);
+            border-radius: 12px;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                        box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        
+
         .art-frame:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 
-                       0 8px 10px -6px rgb(0 0 0 / 0.1);
+            transform: translateY(-4px);
+            box-shadow: 0 35px 60px -15px rgb(0 0 0 / 0.2);
         }
 
-        .gallery-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .art-frame img {
             display: block;
-            background: #f8f8f8;
-        }
-
-        .gallery-img-full {
             width: 100%;
             height: auto;
-            object-fit: contain;
-            display: block;
-            background: #f8f8f8;
+            border-radius: 4px;
+            vertical-align: bottom;
         }
 
         .nav-link {
@@ -109,13 +100,6 @@
         .artwork-title {
             font-size: 15px;
             letter-spacing: -0.2px;
-        }
-
-        .clean-border {
-            /* Simulates the white border treatment from the optimized PDF */
-            box-shadow: 0 0 0 14px #ffffff,
-                        0 0 0 15px #f1f1f1,
-                        0 10px 30px -10px rgb(0 0 0 / 0.15);
         }
 
         .collection-anchor {
@@ -359,7 +343,6 @@
                 measure: '24 × 36 in',
                 note: 'Grand vertical format',
                 gridClass: 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3',
-                aspectClass: 'aspect-[2/3]',
                 works: [
                     {
                         src: 'images/collection-1/monument/monument-01.jpg',
@@ -387,7 +370,6 @@
                 measure: '12 × 36 in per panel · three panels',
                 note: 'Full triptych displayed as one painting',
                 gridClass: 'grid-cols-1',
-                imgClass: 'gallery-img-full',
                 works: [
                     {
                         src: 'images/collection-1/horizon/horizon-01.jpg',
@@ -403,7 +385,6 @@
                 measure: '18 × 24 in',
                 note: 'Studio-scale format',
                 gridClass: 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3',
-                aspectClass: 'aspect-[3/4]',
                 works: [
                     {
                         src: 'images/collection-1/intimate/intimate-01.jpg',
@@ -457,15 +438,14 @@
         }
 
         function renderFormatGroup(format, startIndex) {
-            const imgClass = format.imgClass || `gallery-img ${format.aspectClass}`;
             const cards = format.works.map((work, offset) => {
                 const index = startIndex + offset;
                 const number = String(index + 1).padStart(2, '0');
                 return `
                     <div onclick="openLightbox(${index})" class="portfolio-card group" title="Click to enlarge">
-                        <div class="art-frame clean-border rounded-sm overflow-hidden mb-3 bg-white">
+                        <div class="art-frame mb-3">
                             <img src="${work.src}" alt="${work.title} by Abhilasha Gulhane"
-                                 class="${imgClass} transition-transform duration-500 group-hover:scale-[1.01]">
+                                 class="transition-transform duration-500 group-hover:scale-[1.01]">
                         </div>
                         <div class="px-0.5">
                             <div class="flex justify-between items-baseline gap-3">
