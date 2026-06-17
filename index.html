@@ -51,6 +51,14 @@
             background: #f8f8f8;
         }
 
+        .gallery-img-full {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            display: block;
+            background: #f8f8f8;
+        }
+
         .nav-link {
             position: relative;
             transition: color 0.15s ease;
@@ -377,14 +385,14 @@
                 id: 'horizon',
                 label: 'Horizon Triptychs',
                 measure: '12 × 36 in per panel · three panels',
-                note: 'Single image, three connected canvases',
-                gridClass: 'grid-cols-1 max-w-4xl mx-auto',
-                aspectClass: 'aspect-[3/1]',
+                note: 'Full triptych displayed as one painting',
+                gridClass: 'grid-cols-1',
+                imgClass: 'gallery-img-full',
                 works: [
                     {
                         src: 'images/collection-1/horizon/horizon-01.jpg',
                         title: 'Spectrum of Awareness',
-                        meta: 'Acrylic on canvas, triptych • 12 × 36 in per panel',
+                        meta: 'Acrylic on canvas, triptych • 12 × 36 in per panel · three panels',
                         description: 'Three tall panels trace perception from cosmic eye and suspended triangle, through a dotted cloud-tree of communal growth, to a radiant face mapped with circuitry and a tiered pyramid of collective symbols. Burgundy and navy grounds shift like states of mind.'
                     }
                 ]
@@ -449,6 +457,7 @@
         }
 
         function renderFormatGroup(format, startIndex) {
+            const imgClass = format.imgClass || `gallery-img ${format.aspectClass}`;
             const cards = format.works.map((work, offset) => {
                 const index = startIndex + offset;
                 const number = String(index + 1).padStart(2, '0');
@@ -456,7 +465,7 @@
                     <div onclick="openLightbox(${index})" class="portfolio-card group" title="Click to enlarge">
                         <div class="art-frame clean-border rounded-sm overflow-hidden mb-3 bg-white">
                             <img src="${work.src}" alt="${work.title} by Abhilasha Gulhane"
-                                 class="gallery-img ${format.aspectClass} transition-transform duration-500 group-hover:scale-[1.015]">
+                                 class="${imgClass} transition-transform duration-500 group-hover:scale-[1.01]">
                         </div>
                         <div class="px-0.5">
                             <div class="flex justify-between items-baseline gap-3">
