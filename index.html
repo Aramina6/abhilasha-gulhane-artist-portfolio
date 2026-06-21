@@ -282,11 +282,52 @@
                     <div class="serif text-4xl font-semibold tracking-[-1.5px]">Earlier Projects</div>
                 </div>
                 <div class="flex flex-wrap gap-x-5 gap-y-2 text-sm">
+                    <a href="#family-inspiration" class="collection-anchor">Family Inspiration</a>
                     <a href="#stone-carving" class="collection-anchor">Stone Carving</a>
                     <a href="#blackrock-2024" class="collection-anchor">BlackRock 2024</a>
                     <a href="#blackrock-2023" class="collection-anchor">BlackRock 2023</a>
                     <a href="#kundan-krishna" class="collection-anchor">Kundan Art</a>
                 </div>
+            </div>
+
+            <div id="family-inspiration" class="mb-16 scroll-mt-24">
+                <div class="mb-8">
+                    <div class="format-label mb-2">Inspiration</div>
+                    <h2 class="serif text-3xl md:text-[2.35rem] font-semibold tracking-tight leading-tight">
+                        A Mother's Art
+                    </h2>
+                    <p class="mt-3 max-w-2xl text-[15px] text-[#555] leading-relaxed">
+                        My mother, Dr. P.A. Gulhane — a retired mathematics professor — experimented across
+                        aluminum folk carving, wooden carving, and oil painting. This thirty-year-old canvas is
+                        one of only two paintings we still have from her work.
+                    </p>
+                    <div class="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm">
+                        <a href="https://www.instagram.com/p/BzPfJWrJ1eX/"
+                           target="_blank" rel="noopener noreferrer"
+                           class="inline-flex items-center gap-x-2 font-medium text-[#333] hover:text-black transition-colors">
+                            <i class="fa-brands fa-instagram"></i>
+                            View on Instagram
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-[#f9f7f4] border border-[#ece8df] rounded-2xl p-6 md:p-8 mb-8">
+                    <p class="text-[15px] text-[#333] leading-relaxed">
+                        I grew up surrounded by her art — paintings that once filled our home, each one a quiet
+                        record of patience and imagination. She and my father, a devoted art appreciator, recognized
+                        my talent early and have been instrumental in my journey as an artist, supporting me as I
+                        traveled across the world to learn, observe, and grow.
+                    </p>
+                    <a href="https://www.instagram.com/p/BzPfJWrJ1eX/"
+                       target="_blank" rel="noopener noreferrer"
+                       class="inline-flex items-center gap-x-2 mt-5 text-sm font-medium text-[#333] hover:text-black transition-colors">
+                        <i class="fa-brands fa-instagram"></i>
+                        View original post on Instagram
+                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                    </a>
+                </div>
+
+                <div id="gallery-family-inspiration" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
             </div>
 
             <div id="stone-carving" class="mb-16 scroll-mt-24">
@@ -639,6 +680,16 @@
             ...collectionOneFormats.flatMap(format => format.works)
         ];
 
+        const familyInspirationWorks = [
+            {
+                src: 'images/previous-work/mothers-art/oil-painting.jpg',
+                title: "Mother's Oil Painting",
+                meta: 'Oil on canvas · Dr. P.A. Gulhane · ~30 years',
+                description: "An oil painting by my mother, Dr. P.A. Gulhane — one of only two works from her artistic practice that our family still holds. She explored aluminum folk carving, wooden carving, and oil painting alongside her career as a mathematics professor.",
+                context: "Family Inspiration · Mother's art"
+            }
+        ];
+
         const stoneCarvingWorks = [
             {
                 src: 'images/previous-work/stone-carving/stone-01.jpg',
@@ -760,6 +811,7 @@
 
         const galleries = {
             artworks,
+            familyInspirationWorks,
             stoneCarvingWorks,
             kundanKrishnaWorks,
             blackrock2024InstagramWorks,
@@ -898,6 +950,7 @@
 
         function init() {
             renderCollectionOne();
+            renderPreviousGallery('gallery-family-inspiration', familyInspirationWorks, 'familyInspirationWorks');
             renderPreviousGallery('gallery-stone-carving', stoneCarvingWorks, 'stoneCarvingWorks');
             renderPreviousGallery('gallery-kundan-krishna', kundanKrishnaWorks, 'kundanKrishnaWorks');
             renderPreviousGallery('gallery-blackrock-2024-instagram', blackrock2024InstagramWorks, 'blackrock2024InstagramWorks');
