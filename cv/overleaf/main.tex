@@ -1,0 +1,96 @@
+% !TEX program = pdflatex
+% Artist CV — Abhilasha Gulhane
+% Overleaf: New Project → Upload this file as main.tex → Recompile
+% One page. Letter size. Do not invent exhibitions.
+
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage[margin=0.7in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{mathpazo}
+\usepackage{microtype}
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+
+\definecolor{ink}{HTML}{222222}
+\definecolor{muted}{HTML}{666666}
+\definecolor{rule}{HTML}{D9D3C7}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setstretch{1.08}
+\setlist[itemize]{leftmargin=1.1em, itemsep=0.2em, topsep=0.15em, parsep=0pt}
+
+\titleformat{\section}
+  {\normalsize\bfseries\uppercase\color{ink}}
+  {}{0pt}{}
+  [\vspace{2pt}{\color{rule}\titlerule[0.4pt]}\vspace{6pt}]
+\titlespacing*{\section}{0pt}{14pt}{4pt}
+
+\newcommand{\cvitem}[2]{%
+  \par\noindent
+  \makebox[1.15in][l]{\textcolor{muted}{\small #1}}%
+  \parbox[t]{\dimexpr\textwidth-1.15in\relax}{#2}\par
+  \vspace{7pt}%
+}
+
+\begin{document}
+
+{\Huge\bfseries Abhilasha Gulhane}
+
+\vspace{6pt}
+{\large Visual artist}
+
+\vspace{8pt}
+\textcolor{muted}{Bay Area, California}\\[2pt]
+\href{mailto:abhilashagulhane111@gmail.com}{abhilashagulhane111@gmail.com}
+\;\textbullet\;
++1 650 602 8740
+\;\textbullet\;
+\href{https://www.instagram.com/abhilasha.sfart/}{@abhilasha.sfart}
+
+\vspace{6pt}
+\textit{Paintings of mind, attention, and systems --- in a geometric line language drawn from Maharashtra wall painting.}
+
+\section{Education}
+
+\cvitem{2009}{%
+  \textbf{Intermediate Drawing Grade Examination, Grade A}\\
+  Government Drawing Grade Examination, Directorate of Arts, Government of Maharashtra.\\
+  {\small\color{muted}Annual government-certified art test: still life, memory drawing, design, geometry and lettering.}}
+
+\cvitem{2007}{%
+  \textbf{Elementary Drawing Grade Examination, Grade A}\\
+  Government Drawing Grade Examination, Directorate of Arts, Government of Maharashtra.\\
+  {\small\color{muted}Annual government-certified art test: object drawing, memory drawing, design, plane geometry and lettering.}}
+
+\cvitem{2020}{\textbf{M.S., University of Illinois Urbana-Champaign}}
+
+\cvitem{2018}{\textbf{B.Tech., Indian Institute of Technology Kharagpur}}
+
+\section{Selected work}
+
+\cvitem{2026}{%
+  \textit{\textbf{Human Mind and Technology Ecosystem}}\\
+  Acrylic on canvas. Ten works in three formats: monument canvases ($24 \times 36$ in); horizon triptych ($12 \times 36$ in per panel, three panels); intimate studies ($18 \times 24$ in).}
+
+\section{Charity auctions}
+
+\cvitem{2024}{%
+  \textbf{BlackRock San Francisco Giving Days}, silent auction. Five paintings sold.}
+
+\cvitem{2023}{%
+  \textbf{BlackRock San Francisco Giving Days}, silent auction. Paintings sold.}
+
+\section{Exhibitions}
+
+None to date.
+
+\vspace{16pt}
+{\small\color{muted}Inventory (title, year, medium, size, availability) on request. Prices not listed on the public site.}
+
+\end{document}

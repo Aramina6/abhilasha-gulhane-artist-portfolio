@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abhilasha Gulhane — Artist</title>
-    <meta name="description" content="Portfolio of Abhilasha Gulhane, visual artist. Selected works, artist statement, and biography.">
+    <meta name="description" content="Paintings of mind, attention, and systems by Abhilasha Gulhane. Selected work, 2026: Human Mind and Technology Ecosystem.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
@@ -15,7 +15,7 @@
         }
 
         body {
-            font-family: 'Inter', system_ui, sans-serif;
+            font-family: 'Inter', system-ui, sans-serif;
         }
 
         .serif {
@@ -23,30 +23,22 @@
         }
 
         .heading-font {
-            font-family: 'Space Grotesk', 'Inter', system_ui, sans-serif;
+            font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;
             font-weight: 600;
             letter-spacing: -0.02em;
         }
 
         .art-frame {
-            background-color: #ffffff;
-            padding: 20px;
-            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.15);
-            border-radius: 12px;
-            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-                        box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .art-frame:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 35px 60px -15px rgb(0 0 0 / 0.2);
+            background-color: #f3efe8;
+            padding: 0;
+            box-shadow: none;
+            border-radius: 0;
         }
 
         .art-frame img {
             display: block;
             width: 100%;
             height: auto;
-            border-radius: 4px;
             vertical-align: bottom;
         }
 
@@ -54,7 +46,7 @@
             position: relative;
             transition: color 0.15s ease;
         }
-        
+
         .nav-link:after {
             content: '';
             position: absolute;
@@ -65,7 +57,7 @@
             background-color: #2f2f2f;
             transition: width 0.2s ease;
         }
-        
+
         .nav-link:hover:after {
             width: 100%;
         }
@@ -102,19 +94,6 @@
             letter-spacing: -0.2px;
         }
 
-        .collection-anchor {
-            font-size: 12px;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            color: #666;
-            transition: color 0.15s ease;
-        }
-
-        .collection-anchor:hover,
-        .collection-anchor.active {
-            color: #111;
-        }
-
         .format-label {
             font-size: 11px;
             letter-spacing: 0.14em;
@@ -129,44 +108,25 @@
             color: #999;
             font-weight: 500;
         }
-
-        .collection-divider {
-            height: 1px;
-            background: linear-gradient(to right, transparent, #e8e4dc 12%, #e8e4dc 88%, transparent);
-        }
-
-        .external-link {
-            color: #444;
-            text-decoration: underline;
-            text-underline-offset: 3px;
-            transition: color 0.15s ease;
-        }
-
-        .external-link:hover {
-            color: #111;
-        }
     </style>
 </head>
 <body class="bg-[#f9f7f4] text-[#222]">
-    <!-- Navbar -->
     <nav class="bg-[#f9f7f4]/95 backdrop-blur border-b border-[#e8e4dc] sticky top-0 z-50">
-        <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
-            <div class="flex items-center gap-x-2">
-                <span class="serif text-2xl tracking-tight font-bold">Abhilasha Gulhane</span>
-            </div>
-            
-            <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+        <div class="max-w-5xl mx-auto px-6 py-3 flex flex-wrap items-center justify-between gap-x-6 gap-y-3">
+            <a href="#about" class="serif text-2xl tracking-tight font-bold">Abhilasha Gulhane</a>
+
+            <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-medium">
                 <a href="#about" class="nav-link text-[#333] hover:text-black">About</a>
                 <a href="#work" class="nav-link text-[#333] hover:text-black">Work</a>
-                <a href="#previous-work" class="nav-link text-[#333] hover:text-black">Previous Work</a>
                 <a href="#statement" class="nav-link text-[#333] hover:text-black">Statement</a>
+                <a href="cv.html" class="nav-link text-[#333] hover:text-black">CV</a>
             </div>
 
             <div class="flex items-center gap-x-3">
                 <a href="https://www.instagram.com/abhilasha.sfart/"
                    target="_blank"
                    rel="noopener noreferrer"
-                   aria-label="Instagram"
+                   aria-label="Instagram @abhilasha.sfart"
                    class="inline-flex items-center justify-center w-9 h-9 rounded-full border border-[#d9d3c7] hover:bg-white transition-colors text-[#333]">
                     <i class="fa-brands fa-instagram"></i>
                 </a>
@@ -176,33 +136,30 @@
                     <i class="fa-solid fa-file-pdf"></i>
                     <span class="hidden sm:inline">PDF</span>
                 </a>
-                <button onclick="window.location.href='#work'"
-                        class="inline-flex items-center gap-x-2 bg-[#222] text-white text-sm font-medium px-5 h-9 rounded-full hover:bg-black active:scale-[0.985] transition-all">
-                    View Work
-                </button>
             </div>
         </div>
     </nav>
 
-    <!-- Hero -->
     <header class="max-w-5xl mx-auto px-6 pt-16 pb-12">
         <div class="max-w-2xl">
-            <div class="section-title mb-3">Visual Artist  •  Climate &amp; Energy Researcher</div>
+            <div class="section-title mb-3">Visual Artist</div>
             <h1 class="serif text-[72px] md:text-[86px] leading-[0.92] tracking-tighter font-bold mb-6">
                 Abhilasha<br>Gulhane
             </h1>
-            <p class="max-w-md text-[17px] text-[#444] leading-tight">
-                Exploring stillness, humans, geometry &amp; nature through technology and economics.<br>
-                Inspired by traditional Indian wall painting from Maharashtra, India.
+            <p class="max-w-xl text-[17px] text-[#444] leading-snug">
+                Paintings of mind, attention, and systems — in a geometric line language drawn from Maharashtra wall painting.
             </p>
-            <div class="text-xs text-[#666] mt-3">Bay Area, California &nbsp;•&nbsp; abhilashagulhane111@gmail.com &nbsp;•&nbsp; <a href="https://www.instagram.com/abhilasha.sfart/" target="_blank" rel="noopener noreferrer" class="hover:text-[#222] transition-colors">Instagram @abhilasha.sfart</a></div>
-            <div class="mt-8 flex gap-3">
-                <a href="#work" 
+            <div class="text-xs text-[#666] mt-4">
+                Bay Area, California &nbsp;•&nbsp; abhilashagulhane111@gmail.com &nbsp;•&nbsp;
+                <a href="https://www.instagram.com/abhilasha.sfart/" target="_blank" rel="noopener noreferrer" class="hover:text-[#222] transition-colors">Instagram @abhilasha.sfart</a>
+            </div>
+            <div class="mt-8 flex flex-wrap gap-3">
+                <a href="#work"
                    class="inline-flex items-center justify-center gap-x-2 bg-[#222] hover:bg-black text-white font-medium text-sm h-11 px-7 rounded-full transition-colors">
-                    Explore the work
+                    Selected work, 2026
                     <i class="fa-solid fa-arrow-right text-xs"></i>
                 </a>
-                <a href="#statement" 
+                <a href="#statement"
                    class="inline-flex items-center justify-center gap-x-2 border border-[#d9d3c7] hover:bg-white font-medium text-sm h-11 px-6 rounded-full transition-colors">
                     Read the statement
                 </a>
@@ -210,26 +167,28 @@
         </div>
     </header>
 
-    <!-- About -->
     <section id="about" class="border-t border-[#e8e4dc] bg-white py-12">
         <div class="max-w-5xl mx-auto px-6">
             <div class="grid md:grid-cols-12 gap-x-12 items-start">
                 <div class="md:col-span-4 mb-8 md:mb-0">
-                    <div class="section-title mb-2">About the Artist</div>
+                    <div class="section-title mb-2">About</div>
                     <div class="serif text-4xl font-semibold tracking-tight leading-none">Abhilasha Gulhane</div>
                 </div>
                 <div class="md:col-span-8 max-w-2xl text-[15.2px] text-[#333] leading-relaxed space-y-5">
                     <p>
-                        Abhilasha Gulhane is a Bay Area-based visual artist and climate &amp; energy researcher who bridges technology with the poetic language of traditional Indian folk art. With a natural affinity for both analytical thinking and creativity—gifts inherited from her mother and grandmother—Abhilasha began painting at the age of five. Her grandmother carried forward the living tradition of painting on the walls of their home in India.
+                        Abhilasha Gulhane is a visual artist based in the Bay Area. Her current series,
+                        <em>Human Mind and Technology Ecosystem</em> (2026), uses white acrylic line on deep burgundy
+                        and navy grounds to map thought, attention, circuitry, and living systems as one geometry.
                     </p>
                     <p>
-                        Formally trained, she earned distinction in advanced drawing from the Maharashtra State Board of Art Education, India. She began with pencils and watercolors, exploring humans and nature. In 2015, acrylic and oil painting opened new dimensions. Today she creates powerful acrylic abstracts exploring stillness, humans, geometry, and nature—deeply influenced by traditional Indian wall painting from Maharashtra.
+                        The mark comes from Maharashtra wall painting: a spare, rhythmic line language she treats as a
+                        tool for describing the mind, not as a folk story. Heads become circuit cities. Data becomes
+                        current. Pattern becomes a way of seeing inner and outer worlds at the same scale.
                     </p>
                     <p>
-                        Traditional ritual paintings in this style are created on the inside walls of village huts. The walls are made of branches, earth, and red brick, giving a red ochre background. Artists paint using only white pigment made from rice flour and water, with gum as a binder. These simple materials produce profound geometric expressions of life, community, and nature.
-                    </p>
-                    <p>
-                        Abhilasha has evolved this heritage through extensive travel across twenty states in India, as well as journeys to Egypt and Albuquerque, New Mexico. She observed striking similarities in geometric patterns and humanity’s relationship with nature across cultures. Her work explores how technology and economics shape our inner and outer worlds—revealing the invisible connections that bind us all.
+                        She holds Grade A in the Elementary (2007) and Intermediate (2009) Drawing Grade Examinations —
+                        government-certified art tests of the Maharashtra State Board of Art Education. She has painted
+                        since childhood, moving from pencil and watercolor into acrylic in 2015. Selected work, 2026.
                     </p>
                     <div class="pt-2 text-sm text-[#666]">
                         Bay Area, California
@@ -239,20 +198,15 @@
         </div>
     </section>
 
-    <!-- Work -->
     <section id="work" class="max-w-5xl mx-auto px-6 py-14">
         <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
             <div>
                 <div class="section-title">Work</div>
-                <div class="serif text-4xl font-semibold tracking-[-1.5px]">Collections</div>
-            </div>
-            <div class="flex flex-wrap gap-x-5 gap-y-2 text-sm">
-                <a href="#collection-1" class="collection-anchor">Collection 1</a>
+                <div class="serif text-4xl font-semibold tracking-[-1.5px]">Selected work, 2026</div>
             </div>
         </div>
 
-        <!-- Collection 1 -->
-        <div id="collection-1" class="mb-16 scroll-mt-24">
+        <div id="collection-1" class="mb-8 scroll-mt-24">
             <div class="mb-10">
                 <div class="format-label mb-2">Collection 1</div>
                 <h2 class="serif text-3xl md:text-[2.35rem] font-semibold tracking-tight leading-tight">
@@ -262,7 +216,7 @@
                     A 2026 series in white acrylic line work on deep burgundy and navy grounds — mapping how thought,
                     circuitry, and living systems share the same geometry.
                 </p>
-                <div class="mt-4 text-xs text-[#888] tracking-wide">2026 · Acrylic on canvas · Modern Warli tradition</div>
+                <div class="mt-4 text-xs text-[#888] tracking-wide">2026 · Acrylic on canvas</div>
             </div>
 
             <div id="gallery-collection-1"></div>
@@ -273,253 +227,34 @@
         </div>
     </section>
 
-    <!-- Previous Work -->
-    <section id="previous-work" class="border-t border-[#e8e4dc] bg-white py-14">
-        <div class="max-w-5xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
-                <div>
-                    <div class="section-title">Previous Work</div>
-                    <div class="serif text-4xl font-semibold tracking-[-1.5px]">Earlier Projects</div>
-                </div>
-                <div class="flex flex-wrap gap-x-5 gap-y-2 text-sm">
-                    <a href="#family-inspiration" class="collection-anchor">Family Inspiration</a>
-                    <a href="#stone-carving" class="collection-anchor">Stone Carving</a>
-                    <a href="#blackrock-2024" class="collection-anchor">BlackRock 2024</a>
-                    <a href="#blackrock-2023" class="collection-anchor">BlackRock 2023</a>
-                    <a href="#kundan-krishna" class="collection-anchor">Kundan Art</a>
-                </div>
-            </div>
-
-            <div id="family-inspiration" class="mb-16 scroll-mt-24">
-                <div class="mb-8">
-                    <div class="format-label mb-2">Inspiration</div>
-                    <h2 class="serif text-3xl md:text-[2.35rem] font-semibold tracking-tight leading-tight">
-                        A Mother's Art
-                    </h2>
-                    <p class="mt-3 max-w-2xl text-[15px] text-[#555] leading-relaxed">
-                        My mother, Dr. P.A. Gulhane — a retired mathematics professor — experimented across
-                        aluminum folk carving, wooden carving, and oil painting. This thirty-year-old canvas is
-                        one of only two paintings we still have from her work.
-                    </p>
-                    <div class="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm">
-                        <a href="https://www.instagram.com/p/BzPfJWrJ1eX/"
-                           target="_blank" rel="noopener noreferrer"
-                           class="inline-flex items-center gap-x-2 font-medium text-[#333] hover:text-black transition-colors">
-                            <i class="fa-brands fa-instagram"></i>
-                            View on Instagram
-                        </a>
-                    </div>
-                </div>
-
-                <div class="bg-[#f9f7f4] border border-[#ece8df] rounded-2xl p-6 md:p-8 mb-8">
-                    <p class="text-[15px] text-[#333] leading-relaxed">
-                        I grew up surrounded by her art — paintings that once filled our home, each one a quiet
-                        record of patience and imagination. She and my father, a devoted art appreciator, recognized
-                        my talent early and have been instrumental in my journey as an artist, supporting me as I
-                        traveled across the world to learn, observe, and grow.
-                    </p>
-                    <a href="https://www.instagram.com/p/BzPfJWrJ1eX/"
-                       target="_blank" rel="noopener noreferrer"
-                       class="inline-flex items-center gap-x-2 mt-5 text-sm font-medium text-[#333] hover:text-black transition-colors">
-                        <i class="fa-brands fa-instagram"></i>
-                        View original post on Instagram
-                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-                    </a>
-                </div>
-
-                <div id="gallery-family-inspiration" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-            </div>
-
-            <div id="stone-carving" class="mb-16 scroll-mt-24">
-                <div class="mb-8">
-                    <div class="format-label mb-2">Sculpture</div>
-                    <h2 class="serif text-3xl md:text-[2.35rem] font-semibold tracking-tight leading-tight">
-                        Stone Carving
-                    </h2>
-                    <p class="mt-3 max-w-2xl text-[15px] text-[#555] leading-relaxed">
-                        A hand-carved stone sculpture inspired by visits to archaeological sites — four days of patient
-                        work, six hours each day, shaping form from raw stone.
-                    </p>
-                    <div class="mt-4 text-xs text-[#888] tracking-wide">
-                        Shared on
-                        <a href="https://www.linkedin.com/feed/update/urn:li:activity:6547058385471275008/"
-                           target="_blank" rel="noopener noreferrer" class="external-link">LinkedIn</a>
-                    </div>
-                </div>
-
-                <div class="bg-[#f9f7f4] border border-[#ece8df] rounded-2xl p-6 md:p-8 mb-8">
-                    <p class="text-[15px] text-[#333] leading-relaxed">
-                        Here is the stone carving that I recently completed. The experience of visiting different
-                        archaeological sites, observing various sculpture is surely different from that of actually
-                        carving one from your hand. Waiting and imagining every second, and asking questions — how
-                        will she look after the carving is done, will she get a place in my home, does she reflect
-                        anything inside me? The experience is the same when we join a new job or a college: we dream
-                        for the future and we work for it in the present. It took me 4 days, 6 hours each day to
-                        complete this piece of art.
-                    </p>
-                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:6547058385471275008/"
-                       target="_blank" rel="noopener noreferrer"
-                       class="inline-flex items-center gap-x-2 mt-5 text-sm font-medium text-[#333] hover:text-black transition-colors">
-                        <i class="fa-brands fa-linkedin"></i>
-                        View original post on LinkedIn
-                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-                    </a>
-                </div>
-
-                <div id="gallery-stone-carving" class="grid grid-cols-1 sm:grid-cols-3 gap-6"></div>
-            </div>
-
-            <div id="blackrock-2024" class="mb-16 scroll-mt-24">
-                <div class="mb-8">
-                    <div class="format-label mb-2">Charity Auction · 2024</div>
-                    <h2 class="serif text-3xl md:text-[2.35rem] font-semibold tracking-tight leading-tight">
-                        BlackRock San Francisco Giving Days
-                    </h2>
-                    <p class="mt-3 max-w-2xl text-[15px] text-[#555] leading-relaxed">
-                        Five canvas paintings donated to the 2024 Maker Faire silent auction — 3 in boho style and
-                        2 in Van Gogh style. All five sold during Giving Days.
-                    </p>
-                    <div class="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm">
-                        <a href="https://www.instagram.com/p/C_meTU8Jzit/"
-                           target="_blank" rel="noopener noreferrer"
-                           class="inline-flex items-center gap-x-2 font-medium text-[#333] hover:text-black transition-colors">
-                            <i class="fa-brands fa-instagram"></i>
-                            View on Instagram
-                        </a>
-                        <a href="https://auction.frontstream.com/auction/item/browse.action?auctionId=341770859&categoryId=342167199"
-                           target="_blank" rel="noopener noreferrer"
-                           class="inline-flex items-center gap-x-2 font-medium text-[#333] hover:text-black transition-colors">
-                            View 2024 auction catalog
-                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="bg-[#f9f7f4] border border-[#ece8df] rounded-2xl p-6 md:p-8 mb-8">
-                    <p class="text-[15px] text-[#333] leading-relaxed">
-                        My 5 paintings auctioned! Super excited to share that all my paintings are sold as a part of
-                        silent auction during Giving Days. 3 are boho style and 2 are Van Gogh style. I'm going to
-                        miss them.
-                    </p>
-                </div>
-
-                <div class="mb-10">
-                    <div class="heading-font text-lg text-[#222] mb-4 pb-3 border-b border-[#ece8df]">From Instagram</div>
-                    <div id="gallery-blackrock-2024-instagram" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-                </div>
-
-                <div class="mb-10">
-                    <div class="heading-font text-lg text-[#222] mb-1">Boho Style</div>
-                    <div class="format-measure mb-4 pb-3 border-b border-[#ece8df]">3 paintings · 20.3 × 25.4 cm canvas</div>
-                    <div id="gallery-blackrock-2024-boho" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-                </div>
-
-                <div>
-                    <div class="heading-font text-lg text-[#222] mb-1">Van Gogh Style</div>
-                    <div class="format-measure mb-4 pb-3 border-b border-[#ece8df]">2 paintings · canvas</div>
-                    <div id="gallery-blackrock-2024-vangogh" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-                </div>
-            </div>
-
-            <div id="blackrock-2023" class="mb-16 scroll-mt-24">
-                <div class="mb-8">
-                    <div class="format-label mb-2">Charity Auction · 2023</div>
-                    <h2 class="serif text-3xl md:text-[2.35rem] font-semibold tracking-tight leading-tight">
-                        BlackRock San Francisco Giving Days
-                    </h2>
-                    <p class="mt-3 max-w-2xl text-[15px] text-[#555] leading-relaxed">
-                        First auction of canvas paintings at a Maker Faire event at work, raising money for
-                        non-profit organizations. All paintings sold.
-                    </p>
-                    <div class="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm">
-                        <a href="https://www.instagram.com/p/CxClYxKuuYp/"
-                           target="_blank" rel="noopener noreferrer"
-                           class="inline-flex items-center gap-x-2 font-medium text-[#333] hover:text-black transition-colors">
-                            <i class="fa-brands fa-instagram"></i>
-                            View on Instagram
-                        </a>
-                        <a href="https://m.biddingforgood.com/auctions/341726837/items?category_filter=342074883"
-                           target="_blank" rel="noopener noreferrer"
-                           class="inline-flex items-center gap-x-2 font-medium text-[#333] hover:text-black transition-colors">
-                            View 2023 auction catalog
-                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="bg-[#f9f7f4] border border-[#ece8df] rounded-2xl p-6 md:p-8 mb-8">
-                    <p class="text-[15px] text-[#333] leading-relaxed">
-                        SOLD! First auction of my canvas paintings. Initiated a Maker Faire event at workplace for
-                        raising money for the non-profit organizations. I'm so happy to see all of paintings being sold.
-                    </p>
-                </div>
-
-                <div class="mb-10">
-                    <div class="heading-font text-lg text-[#222] mb-4 pb-3 border-b border-[#ece8df]">From Instagram</div>
-                    <div id="gallery-blackrock-2023-instagram" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-                </div>
-
-                <div>
-                    <div class="heading-font text-lg text-[#222] mb-1">Auction Paintings</div>
-                    <div class="format-measure mb-4 pb-3 border-b border-[#ece8df]">3 acrylic on canvas works</div>
-                    <div id="gallery-blackrock-2023" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-                </div>
-            </div>
-
-            <div id="kundan-krishna" class="scroll-mt-24">
-                <div class="mb-8">
-                    <div class="format-label mb-2">Devotional Art</div>
-                    <h2 class="serif text-3xl md:text-[2.35rem] font-semibold tracking-tight leading-tight">
-                        Kundan Artwork — Krishna
-                    </h2>
-                    <p class="mt-3 max-w-2xl text-[15px] text-[#555] leading-relaxed">
-                        A portrait of Lord Krishna adorned with hand-placed kundan — on his throne, his jewelry,
-                        and his flute. Look closely: the gems are the story.
-                    </p>
-                    <div class="mt-4 text-xs text-[#888] tracking-wide">
-                        Shared on
-                        <a href="https://www.facebook.com/photo/?fbid=1345934595606001&set=pb.100005684206768.-2207520000"
-                           target="_blank" rel="noopener noreferrer" class="external-link">Facebook</a>
-                    </div>
-                </div>
-
-                <div class="bg-[#f9f7f4] border border-[#ece8df] rounded-2xl p-6 md:p-8 mb-8">
-                    <p class="text-[15px] text-[#333] leading-relaxed italic">
-                        Can you see the kundan? Follow the light along Krishna's crown, down through layered
-                        necklaces, across the throne, and into the flute he holds. Each gem is set by hand — a quiet
-                        act of devotion inherited from the women who painted walls in our home. Gold catches fire;
-                        color becomes prayer. This piece asks you to lean in, to find beauty in the smallest stone.
-                    </p>
-                    <a href="https://www.facebook.com/photo/?fbid=1345934595606001&set=pb.100005684206768.-2207520000"
-                       target="_blank" rel="noopener noreferrer"
-                       class="inline-flex items-center gap-x-2 mt-5 text-sm font-medium text-[#333] hover:text-black transition-colors">
-                        <i class="fa-brands fa-facebook"></i>
-                        View original post on Facebook
-                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-                    </a>
-                </div>
-
-                <div id="gallery-kundan-krishna" class="grid grid-cols-1 gap-6 max-w-xl"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Artist Statement -->
     <section id="statement" class="border-t border-[#e8e4dc] bg-white py-12">
         <div class="max-w-5xl mx-auto px-6">
             <div class="max-w-3xl">
                 <div class="section-title mb-2">Artist Statement</div>
                 <h2 class="serif text-4xl tracking-tight font-semibold mb-8">Artist Statement</h2>
-                
+
                 <div class="space-y-6 text-[15.5px] leading-relaxed text-[#333]">
                     <p>
-                        My art bridges technology and economics with the poetic, rhythmic geometries of traditional Indian folk painting from Maharashtra. My grandmother painted on the walls of our home using rice paste on earth and brick. That living tradition lives in my practice today. I explore stillness, humans, geometry, and nature. Through rhythmic white linework, I investigate how technology shapes our inner and outer worlds—how economic systems flow like rivers, how communities form patterns, and how ancient wisdom still speaks to modern life.
+                        I paint the mind as a system: attention, circuitry, and living networks sharing one geometry.
                     </p>
                     <p>
-                        Extensive travel across India, Egypt, and Native American lands revealed to me the same geometric patterns repeating across cultures—the same circles, triangles, and spirals that speak of balance and connection. My work is an invitation to see these invisible threads that connect technology, economy, and the human spirit.
+                        White acrylic line on burgundy and navy is how thought becomes visible — inner weather mapped
+                        onto the same structures that run technology and collective life.
+                    </p>
+                    <p>
+                        The line language is drawn from Maharashtra wall painting; the subject is contemporary
+                        consciousness, not folk narrative.
+                    </p>
+                    <p>
+                        In <em>Human Mind and Technology Ecosystem</em> (2026), heads become circuit cities, data
+                        becomes current, and pattern becomes a way of seeing.
+                    </p>
+                    <p>
+                        The work asks whether thought, economy, and ecology are separate domains, or one field drawn
+                        at different scales.
                     </p>
                 </div>
-                
+
                 <div class="mt-8 text-sm text-[#666]">
                     — Abhilasha Gulhane
                 </div>
@@ -527,44 +262,37 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="border-t border-[#e8e4dc] py-9">
         <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row md:items-center justify-between gap-y-4 text-sm text-[#666]">
             <div>
                 © 2026 Abhilasha Gulhane. All rights reserved.
             </div>
-            <div class="text-xs text-[#666] mt-1">
-                For inquiries: abhilashagulhane111@gmail.com | <a href="https://www.instagram.com/abhilasha.sfart/" target="_blank" rel="noopener noreferrer" class="hover:text-[#222] transition-colors">Instagram @abhilasha.sfart</a>
+            <div class="text-xs text-[#666]">
+                abhilashagulhane111@gmail.com ·
+                <a href="https://www.instagram.com/abhilasha.sfart/" target="_blank" rel="noopener noreferrer" class="hover:text-[#222] transition-colors">@abhilasha.sfart</a>
             </div>
-            <div class="text-xs text-[#666] mt-1">
-                Modern Warli acrylic abstracts exploring stillness, humans, geometry &amp; nature.
-            </div>
-            <div class="flex gap-x-5 mt-2">
-                <a href="Abhilasha_Gulhane_Artist_Portfolio.pdf" target="_blank" class="hover:text-[#222]">Download PDF portfolio</a>
-                <span class="text-[#ccc]">·</span>
-                <span class="text-xs px-2 py-0.5 rounded bg-[#f1eee8]">Hosted on GitHub Pages</span>
+            <div class="flex flex-wrap gap-x-5 gap-y-2">
+                <a href="cv.html" class="hover:text-[#222]">CV</a>
+                <a href="Abhilasha_Gulhane_Artist_Portfolio.pdf" target="_blank" class="hover:text-[#222]">PDF</a>
             </div>
         </div>
     </footer>
 
-    <!-- Lightbox Modal -->
-    <div id="lightbox" onclick="closeLightbox()" 
+    <div id="lightbox" onclick="closeLightbox()"
          class="hidden fixed inset-0 bg-black/90 z-[100] flex items-center justify-center p-4 md:p-10">
-        <div onclick="event.stopImmediatePropagation()" 
+        <div onclick="event.stopImmediatePropagation()"
              class="modal relative max-w-[1100px] w-full">
-            
-            <button onclick="closeLightbox()" 
+
+            <button onclick="closeLightbox()"
                     class="absolute -top-3 -right-3 md:-top-4 md:-right-4 w-10 h-10 bg-white rounded-full flex items-center justify-center text-[#222] shadow hover:bg-[#f9f7f4] z-10">
                 <i class="fa-solid fa-times text-xl"></i>
             </button>
 
             <div class="bg-white shadow-2xl overflow-hidden">
                 <div class="flex flex-col lg:flex-row">
-                    <!-- Image -->
-                    <div class="lg:w-3/5 bg-[#f9f7f4]">
+                    <div class="lg:w-3/5 bg-[#111]">
                         <img id="lightbox-image" class="w-full h-auto max-h-[82vh] object-contain" alt="">
                     </div>
-                    <!-- Info -->
                     <div class="lg:w-2/5 p-8 md:p-10 flex flex-col">
                         <div>
                             <div id="lightbox-title" class="font-semibold text-2xl tracking-tight text-[#222]"></div>
@@ -573,12 +301,12 @@
                         <div id="lightbox-description" class="mt-6 text-[14.5px] leading-relaxed text-[#333] flex-1">
                         </div>
                         <div id="lightbox-context" class="mt-auto pt-6 text-xs text-[#888]">
-                            Human Mind and Technology Ecosystem · Modern Warli acrylic abstracts
+                            Human Mind and Technology Ecosystem · Selected work, 2026
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <div class="mt-3 text-white/60 text-xs px-1 flex justify-between">
                 <div>ESC to close • ← → to navigate</div>
             </div>
@@ -676,152 +404,8 @@
             }
         ];
 
-        const artworks = [
-            ...collectionOneFormats.flatMap(format => format.works)
-        ];
+        const artworks = collectionOneFormats.flatMap(format => format.works);
 
-        const familyInspirationWorks = [
-            {
-                src: 'images/previous-work/mothers-art/oil-painting.jpg',
-                title: "Mother's Oil Painting",
-                meta: 'Oil on canvas · Dr. P.A. Gulhane · ~30 years',
-                description: "An oil painting by my mother, Dr. P.A. Gulhane — one of only two works from her artistic practice that our family still holds. She explored aluminum folk carving, wooden carving, and oil painting alongside her career as a mathematics professor.",
-                context: "Family Inspiration · Mother's art"
-            }
-        ];
-
-        const stoneCarvingWorks = [
-            {
-                src: 'images/previous-work/stone-carving/stone-01.jpg',
-                title: 'Stone Carving',
-                meta: 'Stone sculpture · 4 days, 6 hours per day',
-                description: 'A completed stone carving shaped entirely by hand — born from visits to archaeological sites and the quiet anticipation of watching a figure emerge from raw stone.',
-                context: 'Stone Carving · LinkedIn post'
-            },
-            {
-                src: 'images/previous-work/stone-carving/stone-02.jpg',
-                title: 'Stone Carving — Detail',
-                meta: 'Stone sculpture · In progress',
-                description: 'Mid-carving view of the sculpture, capturing the patient process of revealing form through sustained, daily work.',
-                context: 'Stone Carving · LinkedIn post'
-            },
-            {
-                src: 'images/previous-work/stone-carving/stone-03.jpg',
-                title: 'Stone Carving — Process',
-                meta: 'Stone sculpture · Hand-carved',
-                description: 'Another stage of the carving process — the experience of shaping stone by hand, distinct from observing sculpture at archaeological sites.',
-                context: 'Stone Carving · LinkedIn post'
-            }
-        ];
-
-        const kundanKrishnaWorks = [
-            {
-                src: 'images/previous-work/kundan-krishna/krishna-kundan.jpg',
-                title: 'Kundan Artwork — Krishna',
-                meta: 'Kundan on throne, jewelry & flute · Devotional portrait',
-                description: 'A detailed portrait of Lord Krishna with hand-placed kundan gemstones on his throne, jewelry, and flute — an invitation to look closer and find devotion in every gem.',
-                context: 'Kundan Artwork · Facebook'
-            }
-        ];
-
-        const blackrock2024InstagramWorks = [
-            {
-                src: 'images/previous-work/blackrock-2024/instagram/post-01.jpg',
-                title: 'BlackRock Giving Days 2024',
-                meta: 'Instagram · September 2024',
-                description: 'Shared on Instagram after all five paintings sold at the BlackRock San Francisco Giving Days silent auction.',
-                context: 'BlackRock Giving Days 2024 · Instagram'
-            }
-        ];
-
-        const blackrock2024BohoWorks = [
-            {
-                src: 'images/previous-work/blackrock-2024/finding-yourself.jpg',
-                title: 'Finding Yourself',
-                meta: 'Boho style · 20.3 × 25.4 cm canvas',
-                description: 'Boho-style canvas painting sold at the 2024 BlackRock San Francisco Giving Days Maker Faire silent auction.',
-                context: 'BlackRock Giving Days 2024 · Boho style'
-            },
-            {
-                src: 'images/previous-work/blackrock-2024/girl-with-beauty.jpg',
-                title: 'Girl with Beauty',
-                meta: 'Boho style · 20.3 × 25.4 cm canvas',
-                description: 'Boho-style canvas painting sold at the 2024 BlackRock San Francisco Giving Days Maker Faire silent auction.',
-                context: 'BlackRock Giving Days 2024 · Boho style'
-            },
-            {
-                src: 'images/previous-work/blackrock-2024/resonance-in-beauty.jpg',
-                title: 'Resonance in Beauty',
-                meta: 'Boho style · 20.3 × 25.4 cm canvas',
-                description: 'Boho-style canvas painting sold at the 2024 BlackRock San Francisco Giving Days Maker Faire silent auction.',
-                context: 'BlackRock Giving Days 2024 · Boho style'
-            }
-        ];
-
-        const blackrock2024VanGoghWorks = [
-            {
-                src: 'images/previous-work/blackrock-2024/sunrise-serenade.jpg',
-                title: 'Sunrise Serenade',
-                meta: 'Van Gogh style · 8 × 10 in canvas',
-                description: 'Sunrise scene in Van Gogh style, sold at the 2024 BlackRock San Francisco Giving Days charity auction.',
-                context: 'BlackRock Giving Days 2024 · Van Gogh style'
-            },
-            {
-                src: 'images/previous-work/blackrock-2024/homestead-harmony.jpg',
-                title: 'Homestead Harmony',
-                meta: 'Van Gogh style · 20.3 × 25.4 cm canvas',
-                description: 'Home scene in Van Gogh style, sold at the 2024 BlackRock San Francisco Giving Days charity auction.',
-                context: 'BlackRock Giving Days 2024 · Van Gogh style'
-            }
-        ];
-
-        const blackrock2023InstagramWorks = [
-            {
-                src: 'images/previous-work/blackrock-2023/instagram/post-01.jpg',
-                title: 'Maker Faire Display — 2023',
-                meta: 'Instagram · September 2023',
-                description: 'Paintings on display at the 2023 Maker Faire charity auction for BlackRock San Francisco Giving Days.',
-                context: 'BlackRock Giving Days 2023 · Instagram'
-            }
-        ];
-
-        const blackrock2023Works = [
-            {
-                src: 'images/previous-work/blackrock-2023/abstract-line-face.jpg',
-                title: 'Abstract Line Face Art',
-                meta: 'Acrylic on canvas · BlackRock Giving Days 2023',
-                description: 'Abstract line portrait featured in the 2023 BlackRock San Francisco Giving Days Maker Faire charity auction.',
-                context: 'BlackRock Giving Days 2023 · Maker Faire'
-            },
-            {
-                src: 'images/previous-work/blackrock-2023/abstract-girl.jpg',
-                title: 'Abstract Girl',
-                meta: 'Acrylic on canvas · BlackRock Giving Days 2023',
-                description: 'Abstract portrait featured in the 2023 BlackRock San Francisco Giving Days Maker Faire charity auction.',
-                context: 'BlackRock Giving Days 2023 · Maker Faire'
-            },
-            {
-                src: 'images/previous-work/blackrock-2023/figurative-art.jpg',
-                title: 'Figurative Art',
-                meta: 'Acrylic on canvas · BlackRock Giving Days 2023',
-                description: 'Figurative painting featured in the 2023 BlackRock San Francisco Giving Days Maker Faire charity auction.',
-                context: 'BlackRock Giving Days 2023 · Maker Faire'
-            }
-        ];
-
-        const galleries = {
-            artworks,
-            familyInspirationWorks,
-            stoneCarvingWorks,
-            kundanKrishnaWorks,
-            blackrock2024InstagramWorks,
-            blackrock2024BohoWorks,
-            blackrock2024VanGoghWorks,
-            blackrock2023InstagramWorks,
-            blackrock2023Works
-        };
-
-        let activeGallery = artworks;
         let currentIndex = 0;
         let keyHandlerAttached = false;
 
@@ -833,7 +417,7 @@
                     <div onclick="openLightbox(${index})" class="portfolio-card group" title="Click to enlarge">
                         <div class="art-frame mb-3">
                             <img src="${work.src}" alt="${work.title} by Abhilasha Gulhane"
-                                 class="transition-transform duration-500 group-hover:scale-[1.01]">
+                                 class="transition-opacity duration-300 group-hover:opacity-95">
                         </div>
                         <div class="px-0.5">
                             <div class="flex justify-between items-baseline gap-3">
@@ -857,7 +441,7 @@
                         </div>
                         <div class="text-xs text-[#999]">${format.note}</div>
                     </div>
-                    <div class="grid ${format.gridClass} gap-6">
+                    <div class="grid ${format.gridClass} gap-8">
                         ${cards}
                     </div>
                 </div>
@@ -874,55 +458,26 @@
             }).join('');
         }
 
-        function renderPreviousGallery(containerId, works, galleryKey) {
-            const container = document.getElementById(containerId);
-            container.innerHTML = works.map((work, index) => `
-                <div onclick="openLightboxFrom('${galleryKey}', ${index})" class="portfolio-card group" title="Click to enlarge">
-                    <div class="art-frame mb-3">
-                        <img src="${work.src}" alt="${work.title} by Abhilasha Gulhane"
-                             class="transition-transform duration-500 group-hover:scale-[1.01]">
-                    </div>
-                    <div class="px-0.5">
-                        <div class="artwork-title font-medium">${work.title}</div>
-                        <div class="text-xs text-[#666]">${work.meta}</div>
-                    </div>
-                </div>
-            `).join('');
-        }
-
         function updateLightboxDisplay() {
-            const art = activeGallery[currentIndex];
+            const art = artworks[currentIndex];
             const img = document.getElementById('lightbox-image');
-            const titleEl = document.getElementById('lightbox-title');
-            const metaEl = document.getElementById('lightbox-meta');
-            const descEl = document.getElementById('lightbox-description');
-            const contextEl = document.getElementById('lightbox-context');
-
+            document.getElementById('lightbox-title').textContent = art.title;
+            document.getElementById('lightbox-meta').textContent = art.meta;
+            document.getElementById('lightbox-description').textContent = art.description;
             img.src = art.src;
             img.alt = `${art.title} by Abhilasha Gulhane`;
-            titleEl.textContent = art.title;
-            metaEl.textContent = art.meta;
-            descEl.textContent = art.description;
-            contextEl.textContent = art.context || 'Human Mind and Technology Ecosystem · Modern Warli acrylic abstracts';
         }
 
-        function openLightboxFrom(galleryKey, index) {
-            activeGallery = galleries[galleryKey];
+        function openLightbox(index) {
             currentIndex = index;
             updateLightboxDisplay();
-
             const modal = document.getElementById('lightbox');
             modal.classList.remove('hidden');
             modal.classList.add('flex');
-
             if (!keyHandlerAttached) {
                 document.addEventListener('keydown', handleKey);
                 keyHandlerAttached = true;
             }
-        }
-
-        function openLightbox(index) {
-            openLightboxFrom('artworks', index);
         }
 
         function closeLightbox() {
@@ -934,41 +489,20 @@
         function handleKey(e) {
             const modal = document.getElementById('lightbox');
             if (modal.classList.contains('hidden')) return;
-
-            if (e.key === 'Escape') {
-                closeLightbox();
-            }
+            if (e.key === 'Escape') closeLightbox();
             if (e.key === 'ArrowRight') {
-                currentIndex = (currentIndex + 1) % activeGallery.length;
+                currentIndex = (currentIndex + 1) % artworks.length;
                 updateLightboxDisplay();
             }
             if (e.key === 'ArrowLeft') {
-                currentIndex = (currentIndex - 1 + activeGallery.length) % activeGallery.length;
+                currentIndex = (currentIndex - 1 + artworks.length) % artworks.length;
                 updateLightboxDisplay();
             }
         }
 
-        function init() {
+        window.onload = function () {
             renderCollectionOne();
-            renderPreviousGallery('gallery-family-inspiration', familyInspirationWorks, 'familyInspirationWorks');
-            renderPreviousGallery('gallery-stone-carving', stoneCarvingWorks, 'stoneCarvingWorks');
-            renderPreviousGallery('gallery-kundan-krishna', kundanKrishnaWorks, 'kundanKrishnaWorks');
-            renderPreviousGallery('gallery-blackrock-2024-instagram', blackrock2024InstagramWorks, 'blackrock2024InstagramWorks');
-            renderPreviousGallery('gallery-blackrock-2024-boho', blackrock2024BohoWorks, 'blackrock2024BohoWorks');
-            renderPreviousGallery('gallery-blackrock-2024-vangogh', blackrock2024VanGoghWorks, 'blackrock2024VanGoghWorks');
-            renderPreviousGallery('gallery-blackrock-2023-instagram', blackrock2023InstagramWorks, 'blackrock2023InstagramWorks');
-            renderPreviousGallery('gallery-blackrock-2023', blackrock2023Works, 'blackrock2023Works');
-
-            document.addEventListener('keypress', function(e) {
-                if (e.key === '?') {
-                    document.getElementById('work').scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-
-            console.log('%c[Portfolio] Collection 1 loaded.', 'color:#999');
-        }
-
-        window.onload = init;
+        };
         window.AG_openArtwork = openLightbox;
     </script>
 </body>
