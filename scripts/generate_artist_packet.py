@@ -138,11 +138,7 @@ def make_cv():
         width,
     )
 
-    y = draw_section(c, "Exhibitions", y)
-    c.setFillColor(INK)
-    c.setFont("Times-Roman", 11)
-    c.drawString(0.7 * inch, y, "None to date.")
-    y -= 28
+    y -= 8
     c.setFillColor(MUTED)
     c.setFont("Times-Roman", 9)
     note = "Inventory (title, year, medium, size, availability) on request. Prices not listed on the public site."

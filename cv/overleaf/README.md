@@ -20,6 +20,5 @@ A matching PDF is also generated locally as `../Abhilasha_Gulhane_Artist_CV.pdf`
 - UIUC M.S. (2020) and IIT Kharagpur B.Tech. (2018)
 - 2026 series
 - 2023 and 2024 charity auctions (sold)
-- Exhibitions: none — do not invent them
 
 Edit only facts. Keep it one page.
