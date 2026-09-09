@@ -84,7 +84,7 @@ def make_cv():
     y -= 16
     c.setFillColor(INK)
     c.setFont("Times-Italic", 11)
-    line = "Paintings of mind, attention, and systems — in a geometric line language drawn from Maharashtra wall painting."
+    line = "Paintings of mind, attention, and systems — in a geometric line language drawn from Warli wall art."
     for wrapped in wrap(c, line, "Times-Italic", 11, width - 1.4 * inch):
         c.drawString(0.7 * inch, y, wrapped)
         y -= 14
@@ -197,21 +197,21 @@ def make_inventory():
 
 
 ABOUT = (
-    "Abhilasha Gulhane is a visual artist based in the Bay Area. Her current series, "
-    "Human Mind and Technology Ecosystem (2026), uses white acrylic line on deep burgundy "
-    "and navy grounds to map thought, attention, circuitry, and living systems as one geometry. "
-    "The mark comes from Maharashtra wall painting: a spare, rhythmic line language she treats "
+    "Abhilasha Gulhane is a visual artist based in San Francisco, in the Bay Area, California. "
+    "Her current series, Human Mind and Technology Ecosystem (2026), uses white acrylic line on deep burgundy "
+    "and navy grounds to map human thought, nature, and economy as one geometry. "
+    "Living in the Bay Area, the work is shaped by the AI and technology world around her, "
+    "and by the oceans and mountains of this landscape. "
+    "The mark comes from Warli wall art: a spare, rhythmic line language she treats "
     "as a tool for describing the mind, not as a folk story. Heads become circuit cities. Data "
     "becomes current. Pattern becomes a way of seeing inner and outer worlds at the same scale. "
-    "She holds Grade A in the Elementary (2007) and Intermediate (2009) Drawing Grade Examinations "
-    "— government-certified art tests of the Maharashtra State Board of Art Education. She has "
-    "painted since childhood, moving from pencil and watercolor into acrylic in 2015. Selected work, 2026."
+    "Two works from her practice were shown at BlackRock Giving Days, San Francisco, for two consecutive years (2023 and 2024)."
 )
 
 STATEMENT = [
     "I paint the mind as a system: attention, circuitry, and living networks sharing one geometry.",
     "White acrylic line on burgundy and navy is how thought becomes visible — inner weather mapped onto the same structures that run technology and collective life.",
-    "The line language is drawn from Maharashtra wall painting; the subject is contemporary consciousness, not folk narrative.",
+    "The line language is drawn from Warli wall art; the subject is contemporary consciousness, not folk narrative.",
     "In Human Mind and Technology Ecosystem (2026), heads become circuit cities, data becomes current, and pattern becomes a way of seeing.",
     "The work asks whether thought, economy, and ecology are separate domains, or one field drawn at different scales.",
 ]
@@ -246,7 +246,7 @@ def make_leavebehind():
     c.setFont("Times-Italic", 13)
     for line in wrap(
         c,
-        "Paintings of mind, attention, and systems — in a geometric line language drawn from Maharashtra wall painting.",
+        "Paintings of mind, attention, and systems — in a geometric line language drawn from Warli wall art.",
         "Times-Italic",
         13,
         width - 1.4 * inch,
