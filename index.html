@@ -413,10 +413,14 @@
             const cards = format.works.map((work, offset) => {
                 const index = startIndex + offset;
                 const number = String(index + 1).padStart(2, '0');
+                const eager = index === 0;
                 return `
                     <div onclick="openLightbox(${index})" class="portfolio-card group" title="Click to enlarge">
                         <div class="art-frame mb-3">
                             <img src="${work.src}" alt="${work.title} by Abhilasha Gulhane"
+                                 loading="${eager ? 'eager' : 'lazy'}"
+                                 decoding="async"
+                                 ${eager ? 'fetchpriority="high"' : ''}
                                  class="transition-opacity duration-300 group-hover:opacity-95">
                         </div>
                         <div class="px-0.5">
