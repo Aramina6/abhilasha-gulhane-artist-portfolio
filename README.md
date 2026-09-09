@@ -2,7 +2,8 @@
 
 Public site for **selected work, 2026** only: *Human Mind and Technology Ecosystem*.
 
-Live: https://Aramina6.github.io/abhilasha-gulhane-artist-portfolio/
+Live: https://abhilashagulhane.com  
+GitHub Pages fallback: https://Aramina6.github.io/abhilasha-gulhane-artist-portfolio/
 
 ## Public site (this repo)
 - `index.html` — About, Work (Collection 1), Statement
@@ -20,20 +21,20 @@ Previous work is **not** on this site. Local private archive:
 
 Do not add that folder to this repo or to GitHub Pages.
 
-## Custom domain (still to buy)
-The GitHub Pages URL reads as a student project. Buy one of:
+## Custom domain
+`abhilashagulhane.com` is registered at Porkbun. This repo publishes GitHub Pages and claims that domain via the `CNAME` file.
 
-- `abhilashagulhane.com` (preferred)
-- `abhilasha.studio`
+Porkbun DNS (after cancelling free Link-in-Bio):
 
-Then:
+| Type | Host | Answer |
+|---|---|---|
+| A | *(blank)* | `185.199.108.153` |
+| A | *(blank)* | `185.199.109.153` |
+| A | *(blank)* | `185.199.110.153` |
+| A | *(blank)* | `185.199.111.153` |
+| CNAME | `www` | `aramina6.github.io` |
 
-1. At the registrar, add a CNAME (or ALIAS) for `@` and `www` pointing at `aramina6.github.io`
-2. GitHub repo → Settings → Pages → Custom domain
-3. Add a `CNAME` file in this repo containing the domain (one line)
-4. Wait for HTTPS
-
-Same site. Different signal. Do not add the CNAME file until DNS is yours.
+Or use Porkbun → DNS → Quick DNS Config → **Github**, host `www`, answer `aramina6.github.io`.
 
 ## What still needs a camera, not code
 Reshoot the 2026 canvases: straight-on, even light, no glare, full canvas edge to edge, one detail crop per major work, same color balance. Current jpegs are high-resolution but some still sit in white borders.
@@ -45,10 +46,9 @@ Keep `@abhilasha.sfart` aligned to these 10 paintings. Do not mix Van Gogh / boh
 Abhilasha Gulhane
 Visual artist
 abhilashagulhane111@gmail.com
-https://Aramina6.github.io/abhilasha-gulhane-artist-portfolio/
+https://abhilashagulhane.com
 Instagram @abhilasha.sfart
 ```
-Swap the URL when the custom domain is live.
 
 ## Local preview
 Open `index.html` in a browser, or:
